@@ -1,0 +1,151 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+
+* {
+  border-radius: 12px;
+  border: 2px solid #102C57;
+}
+
+#telefon {
+  /* Rectangle 36 */
+
+  margin-top: 20px;
+
+  background: #EEEEEE;
+
+}
+
+#ePosta {
+
+  margin-top: 20px;
+  background: #EEEEEE;
+  border-radius: 12px;
+
+}
+
+form {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  /* Rectangle 33 */
+  border-radius: 12px;
+
+
+
+
+}
+
+#cvc {
+  /* Rectangle 32 */
+  border-radius: 12px;
+
+
+  background: #EEEEEE;
+  border-color: #102C57;
+  margin-left: 25px;
+  height: 35px;
+}
+
+#adres {
+  /* Rectangle 40 */
+  padding: 20px;
+  margin-top: 20px;
+
+  background: #EEEEEE;
+
+
+
+}
+
+#kartNo {
+  /* Rectangle 42 */
+
+
+  width: 400px;
+  background: #EEEEEE;
+  border-radius: 12px;
+
+}
+
+#xx {
+  /* Ödeme Bilgileri */
+
+
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 51px;
+  /* identical to box height */
+  border-radius: 12px;
+  border: 2px solid #ffffff;
+  color: #102C57;
+
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 8px;
+}
+
+#bitisTar {
+  /* Rectangle 44 */
+  width: 200px;
+  height: 35px;
+  background: #EEEEEE;
+
+
+}
+
+button {
+  color: white;
+  padding: 10px 20px;
+  font-size: large;
+  background: #102C57;
+  margin-left: 120px;
+
+}
+
+#adSoyad {
+  /* Rectangle 33 */
+
+
+
+  background: #EEEEEE;
+
+}
+
+button:hover {
+  background-color: #0700d2d1;
+}
+
+#kb {
+  /* Kişisel Bilgiler */
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 37px;
+  line-height: 51px;
+  border-radius: 12px;
+  border: 2px solid #fcfcfc;
+  /* identical to box height */
+
+  color: #102C57;
+
+
+}
