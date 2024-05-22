@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -20,11 +20,6 @@ namespace Clover_Store.Models
         public DateTime Log_date { get; set; }  
         [Column(TypeName = "Image")]
         public byte[]? Profile_image { get; set; }
-=======
-﻿namespace Clover_Store.Models
-{
-    public class Cutomer
-    {
->>>>>>> 8e0230ece769cbf85e6a1bb4f28ae3a8032599bd
+
     }
 }
