@@ -7,9 +7,9 @@ namespace Clover_Store.Models
     {
         [Key]
         public int Id { get; set; }
-        [Column(TypeName ="Date")]
+        [Column(TypeName = "Date")]
         public DateTime Order_date { get; set; }
-        public int Customer {  get; set; }  
+        public int Customer { get; set; }
         public int CardID { get; set; }
         public string City { get; set; } = string.Empty;
         public string Zip_code { get; set; } = string.Empty;
@@ -17,3 +17,4 @@ namespace Clover_Store.Models
         public decimal Total_price { get; set; }
     }
 }
+
