@@ -1,0 +1,37 @@
+﻿@model Cutomer
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" type="text/css" href="~/css/mainStyle.css">
+</head>
+<body>
+
+    
+    <div class="register-container">
+        <h1 class="reg__title">Create a new account</h1>
+        <form method="post">
+            <div class="input-group">
+                <label for="fullname">Full name</label>
+                <input asp-for="Full_name" type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input asp-for="Email" type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="username">User name</label>
+                <input asp-for="User_name"  type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input asp-for="Password"  type="password" id="password" name="password" required>
+                <span asp-validation-for="Password" class="denger"></span>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>

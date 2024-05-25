@@ -1,6 +1,7 @@
 ﻿
 using Clover_Store.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 namespace Clover_Store.Data{
     public class ApplicationDbContext: DbContext
     {
@@ -18,5 +19,19 @@ namespace Clover_Store.Data{
         public DbSet<Reviwe> Reviwe { get; set; }
         public DbSet<Sizes> Sizes { get; set; }
         public DbSet<wishList> wishList { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+          /*  modelBuilder.Entity<Categorys>().HasData(
+                new Categorys { Id = 1,Name="short",Details="" }
+
+                );
+            modelBuilder.Entity<Product>().HasData(
+                new Product {Id=1,Title="sweatsheart" ,Brand_name="nike",CategoryID=1,Gender="Male",Total_quantity=13,Description="guzel"},
+                 new Product { Id = 2, Title = "sweat", Brand_name = "nike", CategoryID = 1, Gender = "Male", Total_quantity = 13, Description = "guzel" },
+                  new Product { Id = 3, Title = "man style", Brand_name = "adedas", CategoryID = 1, Gender = "Male", Total_quantity = 10, Description = "guzel" }
+
+                );*/
+
+        }
     }
 }

@@ -17,6 +17,8 @@ namespace Clover_Store.Controllers
         {
             return View();
         }
+        
+
 
         public IActionResult Privacy()
         {

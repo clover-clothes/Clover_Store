@@ -81,7 +81,7 @@ namespace Clover_Store.Migrations
                     Full_name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     User_name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(24)", nullable: false),
                     Adress = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Gender = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Phon_number = table.Column<string>(type: "nvarchar(max)", nullable: false),

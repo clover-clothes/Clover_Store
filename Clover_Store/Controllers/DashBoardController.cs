@@ -2,7 +2,7 @@
 
 namespace Clover_Store.Controllers
 {
-    public class ProductController1 : Controller
+    public class DashBoardController : Controller
     {
         public IActionResult Index()
         {

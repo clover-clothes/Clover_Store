@@ -4,6 +4,7 @@ using Clover_Store.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Clover_Store.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240522230119_seedProductTable")]
+    partial class seedProductTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -96,6 +99,14 @@ namespace Clover_Store.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categorys");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Details = "",
+                            Name = "short"
+                        });
                 });
 
             modelBuilder.Entity("Clover_Store.Models.Colors", b =>
@@ -144,12 +155,11 @@ namespace Clover_Store.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Log_date")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("Date");
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasMaxLength(24)
-                        .HasColumnType("nvarchar(24)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Phon_number")
                         .IsRequired()
@@ -267,6 +277,38 @@ namespace Clover_Store.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Brand_name = "nike",
+                            CategoryID = 1,
+                            Description = "guzel",
+                            Gender = "Male",
+                            Title = "sweatsheart",
+                            Total_quantity = 13
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Brand_name = "nike",
+                            CategoryID = 1,
+                            Description = "guzel",
+                            Gender = "Male",
+                            Title = "sweat",
+                            Total_quantity = 13
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Brand_name = "adedas",
+                            CategoryID = 1,
+                            Description = "amazing",
+                            Gender = "Male",
+                            Title = "man style",
+                            Total_quantity = 10
+                        });
                 });
 
             modelBuilder.Entity("Clover_Store.Models.Reviwe", b =>

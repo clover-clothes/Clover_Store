@@ -5,7 +5,7 @@ namespace Clover_Store.Models
 {
     public class OrderItem
     {
-        [Key
+        [Key]
         public int Id { get; set; }
         public int  Quantity { get; set; }
         public int ProductID { get; set; }
