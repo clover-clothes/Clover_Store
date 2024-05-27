@@ -19,3 +19,22 @@ namespace Clover_Store.Models
 
     }
 }
+/*
+
+[MaxLength(15, ErrorMessage = "Plase enter correct value"), MinLength(2)]
+[DataType(DataType.Text)]
+public string LastName { get; set; }
+[DataType(DataType.EmailAddress)]
+[Required(ErrorMessage = "The Password of User is Required")]//
+
+[DataType(DataType.Password)]
+public string Password { get; set; }
+
+
+[DataType(DataType.PhoneNumber)]
+public long Phone { get; set; }
+
+
+
+    }
+*/

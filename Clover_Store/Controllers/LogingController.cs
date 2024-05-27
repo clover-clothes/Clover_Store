@@ -23,8 +23,13 @@ namespace Clover_Store.Controllers
         [HttpPost]
         public IActionResult signUp(Cutomer obj)
         {
-            _db.Cutomer.Add(obj);
-            _db.SaveChanges();
+            obj.Log_date = DateTime.Now;
+            if (ModelState.IsValid) {
+                _db.Cutomer.Add(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index","Home");
+            }
+            
             return View();
         }
 
