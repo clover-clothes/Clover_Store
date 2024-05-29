@@ -129,7 +129,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--color-secondeary);
+    background-color: #c4ad93;
     padding-block: 1.2rem;
     padding-inline: 4.8rem;
 }
