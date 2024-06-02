@@ -1,0 +1,33 @@
+﻿<html>
+<head>
+    <title>Pay Now</title>
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="~/css/mainStyle.css">
+</head>
+<body>
+
+    <form id="form1" action="your-script.php" method="post">
+        <h2 id="title1">Personal Information</h2>
+
+        <input type="text" id="adSoyad" placeholder="Full name" name="adSoyad" required>
+
+
+        <input type="text" id="telefon" placeholder="  053____" name="telefon" required>
+
+        <input type="email" placeholder=" Email" id="ePosta" name="ePosta" required>
+
+        <textarea id="adres" placeholder="Addres" name="adres" rows="4" required></textarea>
+
+        <h2 id="xx">Payment information</h2>
+
+        <input type="number" placeholder=" Card number" id="kartNo" name="kartNo" required> <br> <br>
+
+        <input type="month" id="bitisTar" placeholder=" Expiration date" name="bitisTar" required>
+
+        <input type="password" placeholder=" CVC" id="cvc" name="cvc" required> <br> <br>
+
+        <button id="but1" type="submit">pay now</button>
+    </form>
+</body>
+</html>

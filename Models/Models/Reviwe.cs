@@ -11,7 +11,11 @@ namespace Clover_Store.Models
         public int Id { get; set; }
         public string? Comment { get; set; } = string.Empty;
         public int ProductID { get; set; }
+        [ForeignKey("ProductID")]
+        public Product Product { get; set; }
         public int CusomerID { get; set; }
+        [ForeignKey("CusomerID")]
+        public Customer Customer { get; set; }
         public int Rank { get; set; } //5/5
         [Column(TypeName = "Date")]
         public DateTime DateTime { get; set; }

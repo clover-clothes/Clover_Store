@@ -9,9 +9,10 @@ namespace Clover_Store.Models
         [Required]
         public string Image_url { get; set; }
 
-        [ForeignKey("ProductId")]
-        public int ProductId { get; set; }
         
-        public Product Product { get; set; }
+        public int attributId { get; set; }
+        [ForeignKey("attributId")]
+        
+        public attributes attributes { get; set; }
     }
 }

@@ -9,12 +9,13 @@ namespace Clover_Store.Models
         [Key]
         public int Id { get; set; }
         public int  Quantity { get; set; }
-        [ForeignKey("ProductId")]
-        public int ProductID { get; set; }
-        [ForeignKey("AttrbuteId")]
+        [ForeignKey("AttrbuteID")]
+        public attributes attribute { get; set; }
         public int AttrbuteID { get; set; }
-        [ForeignKey("OrderId")]
+        
         public int OrderID { get; set; }
+        [ForeignKey("OrderID")]
+        public Order Order { get; set; }
 
     }
 }
