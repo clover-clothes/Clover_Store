@@ -1,6 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@model ProductVM
 
 <!DOCTYPE html>
 <html lang="en">
@@ -64,18 +65,21 @@
             <div class="container">
                 <div class="hero__image-side">
                     <div class="hero__image-container">
-                        <img src="~/Images/brown.jpeg"
+                        <img src="~/Images/06674405800-p.jpg"
                              alt="hero image"
                              class="hero__image" />
                     </div>
+                   
                 </div>
                 <div class="hero__content-side">
+                   
+
                     <hgroup class="hero__title-group">
                         <p class="hero__sub-title">Clothes Store</p>
                         <h1 class="hero__title">The Best Clothes You'll Ever Buy</h1>
                     </hgroup>
-                    <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies sem vitae mi convallis, non scelerisque nisi cursus. Suspendisse ac turpis id nulla placerat scelerisque.</p>
-                    <a class="btn--primary">Keşfet</a>
+                    <p class="hero__text">Most famous international brands and types of clothing await you.</p>
+                    <a class="btn--primary">Discover More</a>
                 </div>
             </div>
         </section>
@@ -90,6 +94,28 @@
             <div class="container">
                 <div class="product-grid">
 
+                   @*  @foreach (var obj in Model.Product.to)
+                    {
+                        
+                        <article class="card">
+                            <a asp-area="Admin" asp-controller="Product" asp-action="Details">
+                            <div class="card__image-container">
+                            <img src = "~/Images/gold.jpeg" alt="product image" class="card__image" />
+                            </div>
+                                <h3 class="card__title">Model.Product.Title</h3>
+                            <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div class="card__bottom">
+                            <p class="card__price">
+                            <span class="card__price--number">499</span>
+                            <span class="card__price--symbol">$</span>
+                            </p>
+                            <a href = "#" class="card__btn">Add to cart</a>
+                            </div>
+                            </a>
+                           </article>
+
+
+                       } *@
                     <article class="card">
                         <a asp-area="Admin" asp-controller="Product" asp-action="Details">
                             <div class="card__image-container">
@@ -138,7 +164,8 @@
                                 <span class="card__price--number">499</span>
                                 <span class="card__price--symbol">$</span>
                             </p>
-                            <a href="#" class="card__btn">Add to cart</a>
+                             <a href="#" class="card__btn">Add to cart</a>
+                            <a href="#" class="product-like">Add to cart</a>
                         </div></a>
                     </article>
 
@@ -197,14 +224,14 @@
             <div class="container">
                 <article class="cto">
                     <div class="cto__image-side">
-                        <img src="https://fakeimg.pl/500x500/0d2346/adb5bd" alt="product image" class="cto__image" />
+                        <img src="~/Images/05372306066-a1.jpg" alt="product image" class="cto__image" />
                     </div>
                     <div class="cto__content-side">
-                        <h2 class="cto__title">cto title</h2>
+                        <h2 class="cto__title">When you choose elegance</h2>
                         <p class="cto__text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies sem vitae mi convallis, non scelerisque nisi cursus. Suspendisse ac turpis id nulla placerat scelerisque.
                         </p>
-                        <a class="btn--primary">Cto Button</a>
+                        <a class="btn--primary">Discover More</a>
                     </div>
                 </article>
             </div>

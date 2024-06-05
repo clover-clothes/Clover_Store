@@ -4,6 +4,7 @@ using Clover_Store.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Clover_Store.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240604181122_edit")]
+    partial class edit
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -70,56 +73,6 @@ namespace Clover_Store.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categorys");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Details = "",
-                            Name = "pants"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Details = "",
-                            Name = "sport"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Details = "",
-                            Name = "dress"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Details = "",
-                            Name = "skirt"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Details = "",
-                            Name = "shirt"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Details = "",
-                            Name = "sweat"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Details = "",
-                            Name = "Tunic"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Details = "",
-                            Name = "Coat"
-                        });
                 });
 
             modelBuilder.Entity("Clover_Store.Models.Colors", b =>
@@ -146,56 +99,6 @@ namespace Clover_Store.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Colors");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Blue = 54,
-                            Green = 67,
-                            Name = "Green",
-                            Red = 37
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Blue = 142,
-                            Green = 193,
-                            Name = "Sage",
-                            Red = 181
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Blue = 163,
-                            Green = 183,
-                            Name = "Brown",
-                            Red = 199
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Blue = 58,
-                            Green = 29,
-                            Name = "Maroon",
-                            Red = 169
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Blue = 124,
-                            Green = 169,
-                            Name = "Ecru",
-                            Red = 185
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Blue = 65,
-                            Green = 86,
-                            Name = "Khaki",
-                            Red = 91
-                        });
                 });
 
             modelBuilder.Entity("Clover_Store.Models.Customer", b =>
@@ -349,10 +252,6 @@ namespace Clover_Store.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Material")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -369,41 +268,6 @@ namespace Clover_Store.Migrations
                     b.HasIndex("CategoryID");
 
                     b.ToTable("Products");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Brand_name = "LCW",
-                            CategoryID = 1,
-                            Description = "Made from waffle fabric, this t-shirt offers a stylish and modern look with its polo collar design.\r\n With its soft and comfortable texture,\r\n it can be preferred both in daily life and on special occasions.",
-                            Material = "100% Cotton",
-                            Title = "Polo Yaka Kısa Kollu Pike Erkek Tişört",
-                            Total_quantity = 13,
-                            Type = "Male"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Brand_name = "adidas",
-                            CategoryID = 5,
-                            Description = "It is made of durable and easy-care polyester fabric.\r\n Its short sleeve design keeps you cool and comfortable even in hot weather conditions.",
-                            Material = "100% Cotton",
-                            Title = "Regular Fit Men's Short Sleeve Shirt",
-                            Total_quantity = 13,
-                            Type = "Male"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Brand_name = "ZARA",
-                            CategoryID = 7,
-                            Description = "Round neck, straight short sleeve oversize tunic, made of single jersey fabric. It provides coolness in summer with its light and breathable structure. \r\nIts oversize cut provides freedom of movement and is designed in hip-length length so that you can move comfortably.",
-                            Material = "100% Cotton",
-                            Title = "Crew Neck Plain Short Sleeve Oversize Women's Tunic",
-                            Total_quantity = 13,
-                            Type = "Male"
-                        });
                 });
 
             modelBuilder.Entity("Clover_Store.Models.Reviwe", b =>
@@ -456,116 +320,6 @@ namespace Clover_Store.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Sizes");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Details = "",
-                            Name = "XS"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Details = "",
-                            Name = "S"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Details = "",
-                            Name = "M"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Details = "",
-                            Name = "L"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Details = "",
-                            Name = "XL"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Details = "",
-                            Name = "2XL"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Details = "",
-                            Name = "3XL"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Details = "",
-                            Name = "26"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Details = "",
-                            Name = "27"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            Details = "",
-                            Name = "28"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            Details = "",
-                            Name = "29"
-                        },
-                        new
-                        {
-                            Id = 12,
-                            Details = "",
-                            Name = "30"
-                        },
-                        new
-                        {
-                            Id = 13,
-                            Details = "",
-                            Name = "30-31"
-                        },
-                        new
-                        {
-                            Id = 14,
-                            Details = "",
-                            Name = "30-32"
-                        },
-                        new
-                        {
-                            Id = 15,
-                            Details = "",
-                            Name = "31"
-                        },
-                        new
-                        {
-                            Id = 16,
-                            Details = "",
-                            Name = "32"
-                        },
-                        new
-                        {
-                            Id = 17,
-                            Details = "",
-                            Name = "32-31"
-                        },
-                        new
-                        {
-                            Id = 18,
-                            Details = "",
-                            Name = "36"
-                        });
                 });
 
             modelBuilder.Entity("Clover_Store.Models.attributes", b =>
@@ -600,80 +354,6 @@ namespace Clover_Store.Migrations
                     b.HasIndex("SizeID");
 
                     b.ToTable("attributes");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            ColorID = 2,
-                            Price = 699.99m,
-                            ProductID = 1,
-                            Quantity = 10,
-                            SizeID = 2
-                        },
-                        new
-                        {
-                            Id = 2,
-                            ColorID = 4,
-                            Price = 699.99m,
-                            ProductID = 1,
-                            Quantity = 10,
-                            SizeID = 3
-                        },
-                        new
-                        {
-                            Id = 3,
-                            ColorID = 4,
-                            Price = 799.99m,
-                            ProductID = 1,
-                            Quantity = 10,
-                            SizeID = 4
-                        },
-                        new
-                        {
-                            Id = 4,
-                            ColorID = 2,
-                            Price = 675.00m,
-                            ProductID = 2,
-                            Quantity = 10,
-                            SizeID = 3
-                        },
-                        new
-                        {
-                            Id = 5,
-                            ColorID = 2,
-                            Price = 975.00m,
-                            ProductID = 2,
-                            Quantity = 8,
-                            SizeID = 6
-                        },
-                        new
-                        {
-                            Id = 6,
-                            ColorID = 6,
-                            Price = 975.00m,
-                            ProductID = 2,
-                            Quantity = 14,
-                            SizeID = 3
-                        },
-                        new
-                        {
-                            Id = 7,
-                            ColorID = 6,
-                            Price = 899.99m,
-                            ProductID = 2,
-                            Quantity = 10,
-                            SizeID = 5
-                        },
-                        new
-                        {
-                            Id = 8,
-                            ColorID = 2,
-                            Price = 899.99m,
-                            ProductID = 3,
-                            Quantity = 15,
-                            SizeID = 2
-                        });
                 });
 
             modelBuilder.Entity("Clover_Store.Models.wishList", b =>

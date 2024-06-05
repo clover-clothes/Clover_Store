@@ -26,6 +26,18 @@ namespace Store.DataAccess.Repository
         {
             _db = db;
             product = new ProductRepository(db);
+            attributes = new attributesRepository(db);
+            Card = new CardRepository(db);
+            Categorys = new CategorysRepository(db);
+            Colors = new ColorsRepository(db);
+            Customer = new CustomerRepository(db);
+            Image = new ImageRepository(db);
+            Order = new OrderRepository(db);
+            reviwe = new ReviweRepository(db);
+            Sizes = new SizesRepository(db);
+            wishList = new wishListRepository(db);
+            
+
         }
         
         public void Save() {

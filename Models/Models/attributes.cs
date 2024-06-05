@@ -1,5 +1,6 @@
 
-﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Clover_Store.Models
@@ -21,8 +22,8 @@ namespace Clover_Store.Models
         public int Quantity { get; set; }
         [Column(TypeName = "decimal(10,2)")]
         public decimal Price { get; set; }
-      
-
+        [ValidateNever]
+        public List<Image> Images { get; set; }
 
     }
 }

@@ -18,6 +18,7 @@ namespace Store.DataAccess.Repository
         {
             _db = db;
             this.dbSet = _db.Set<T>();
+            _db.Products.Include(u => u.Category);
         }
         public void Add(T entity)
         {
