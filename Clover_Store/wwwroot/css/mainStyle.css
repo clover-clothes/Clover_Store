@@ -314,11 +314,13 @@ img {
 
 .card__title {
     font-size: 2.4rem;
+    color: aliceblue;
     margin-bottom: .4rem;
 }
 
 .card__description {
     font-size: 1.4rem;
+    color: black;
     margin-bottom: 1.2rem;
 }
 
@@ -331,6 +333,7 @@ img {
 
 .card__price {
     font-size: 2rem;
+    color: lavender;
     font-weight: 600;
 }
 
@@ -646,6 +649,7 @@ button:disabled {
 #sliderValue {
     font-weight: bold;
 }
+
 
 
 

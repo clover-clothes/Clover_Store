@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Clover_Store.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="//cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css" />
+
+    
 </head>
 <body>
     <header>
@@ -36,7 +39,7 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="container1">
         <main  role="main" class="pb-3" >
             @RenderBody()
         </main>
@@ -97,6 +100,10 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="//cdn.datatables.net/2.0.8/js/dataTables.min.js" asp-append-version="true"></script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
     <script src="https://cdn.tiny.cloud/1/2vjp4ratj8jkrmr3nrkpkh0hzp2xir4o5se9ncycj3ulbub8/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

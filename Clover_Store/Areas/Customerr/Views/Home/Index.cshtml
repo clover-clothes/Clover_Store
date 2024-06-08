@@ -1,7 +1,7 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
-}
-@model ProductVM
+    ViewData["Title"] = "Home Page"; 
+} 
+@model IEnumerable<Product>;
 
 <!DOCTYPE html>
 <html lang="en">
@@ -94,19 +94,19 @@
             <div class="container">
                 <div class="product-grid">
 
-                   @*  @foreach (var obj in Model.Product.to)
+                    @foreach (var product in Model)
                     {
                         
                         <article class="card">
-                            <a asp-area="Admin" asp-controller="Product" asp-action="Details">
+                            <a asp-action="Details" asp-route-Id="@product.Id">
                             <div class="card__image-container">
                             <img src = "~/Images/gold.jpeg" alt="product image" class="card__image" />
                             </div>
-                                <h3 class="card__title">Model.Product.Title</h3>
-                            <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <h3 class="card__title">@product.Title</h3>
+                                <p class="card__description">@product.Description</p>
                             <div class="card__bottom">
                             <p class="card__price">
-                            <span class="card__price--number">499</span>
+                                        <span class="card__price--number">@product.attributes[0].Price</span>
                             <span class="card__price--symbol">$</span>
                             </p>
                             <a href = "#" class="card__btn">Add to cart</a>
@@ -115,9 +115,9 @@
                            </article>
 
 
-                       } *@
+                       }
                     <article class="card">
-                        <a asp-area="Admin" asp-controller="Product" asp-action="Details">
+                        <a  asp-controller="Home" asp-action="Details">
                             <div class="card__image-container">
                                 <img src="~/Images/gold.jpeg" alt="product image" class="card__image" />
                             </div>
@@ -139,6 +139,7 @@
                         <a asp-area="Admin" asp-controller="Product" asp-action="Details">
                         <div class="card__image-container">
                             <img src="~/Images/red.jpeg" alt="product image" class="card__image" />
+                               
                         </div>
                         <h3 class="card__title">Product title</h3>
                         <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
