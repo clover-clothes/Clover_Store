@@ -1,0 +1,83 @@
+﻿@model Customer
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <style>
+
+       /*  body {
+            background-color: #DAC0A3 #102C57;
+        } */
+    </style>
+    <link rel="stylesheet" type="text/css" href="~/css/mainStyle.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__top-bar">
+            <div class="header__logo">
+                <a asp-area="Customerr" asp-controller="Home" asp-action="Index" class="header__logo--link"> <img src="~/Images/Logo1.png" width="40%" alt=""> </a>
+            </div>
+            <form action="#" class="header__search">
+                <input type="text"
+                       class="header__search-input"
+                       placeholder="Search different clothes" />
+            </form>
+            <div class="header__login">
+                <a asp-controller="Loging" asp-action="logIn" class="header__login-link">Login</a>
+            </div>
+        </div>
+        <nav class="header__category">
+            <a href="#" class="btn btn--link">Men</a>
+            <a href="#" class="btn btn--link">Women</a>
+            <a href="#" class="btn btn--link">Kid</a>
+            <a href="#" class="btn btn--link">Sport</a>
+            <a href="#" class="btn btn--link">Dress</a>
+            <a href="#" class="btn btn--link">Pants</a>
+            <a href="#" class="btn btn--link">Skirt</a>
+            <a href="#" class="btn btn--link">Undreware</a>
+            <a href="#" class="btn btn--link">Shirt</a>
+            <a href="#" class="btn btn--link">Sweat</a>
+            <a href="#" class="btn btn--link">Shoes</a>
+
+        </nav>
+    </header>
+
+    
+    <div class="register-container">
+        <h1 class="reg__title">Create a new account</h1>
+        <form method="post">
+             @* <div asp-validation-summary="All"></div>  *@
+            <div class="input-group">
+                <label for="fullname">Full Name</label>
+                <input asp-for="Full_name" type="text" id="Full_name" name="Full_name" required>
+                <span asp-validation-for="Full_name" class="danger"></span>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input asp-for="Email" type="email" id="Email" name="Email" required>
+                <span asp-validation-for="Email" class="danger"></span>
+            </div>
+            <div class="input-group">
+                <label for="username">Phon Number</label>
+                <input asp-for="Phon_number" type="text" id="Phon_number" name="Phon_number" required>
+                <span asp-validation-for="Phon_number" class="danger"></span>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input asp-for="Password" type="password" id="Password" name="Password" required>
+                <span asp-validation-for="Password" class="danger"></span>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    @section Scripts{
+    @{
+
+        <partial name="_ValidationScriptsPartial"/>
+    }
+
+}
+</body>
+</html>

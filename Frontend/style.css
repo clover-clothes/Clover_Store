@@ -367,7 +367,11 @@ img {
   font-size: 1.6rem;
   margin-bottom: 4.8rem;
 }
+<<<<<<< HEAD
 .center {
+=======
+.center{
+>>>>>>> 9ab82ffaba29439bf487c6df97e9b1680b99d0ca
   background-color: #70809a;
   margin-left: 350px;
   text-align: center;
@@ -375,6 +379,7 @@ img {
   border-radius: 10px;
   width: 50%;
   margin-top: 100px;
+<<<<<<< HEAD
 }
 #s1 {
   width: 1000px;
@@ -455,3 +460,20 @@ img {
 .footer-copyright a:hover {
   color: #ffffff;
 }
+=======
+  
+}
+#s1{
+  width: 1000px;
+}
+.sepp .material-symbols-outlined {
+  font-size: 36px; 
+  float: right;
+}
+.sepp .material-symbols-outlined:hover {
+  color: rgb(1, 24, 232); 
+}
+/* CTO Section style (end) */
+
+/* Home page style (end) */
+>>>>>>> 9ab82ffaba29439bf487c6df97e9b1680b99d0ca

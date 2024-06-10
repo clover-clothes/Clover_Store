@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -7,6 +8,9 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Clover_Store.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="//cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css" />
+
+    
 </head>
 <body>
     <header>
@@ -18,38 +22,95 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    @if (User.IsInRole(SD.Role_Admin))
+                    {
+                        
+                    
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area = "Customerr" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Product" asp-action="Index">products</a>
+                            <a class="nav-link text-dark" asp-area="Admin" asp-controller="Product" asp-action="Index">products</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="DashBoard" asp-action="Index">Dash board</a>
+                            <a class="nav-link text-dark" asp-area = "Admin" asp-controller="DashBoard" asp-action="Index">Dash board</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="Customerr"  asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
+                    }
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+    <div class="container1">
+        <main  role="main" class="pb-3" >
             @RenderBody()
         </main>
     </div>
-
+@* 
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2024 - Clover_Store - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer> *@
+    <footer class="page-footer ">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">CLOVER STOR</h5>
+                    <p class="grey-text text-lighten-4">At Clover Store we offer a wide range of modern and comfortable clothes that suit all tastes and occasions. We seek to provide an enjoyable and distinctive shopping experience for our customers.</p>
+                </div>
+                <div class="col l4 offset-l1 s12">
+                    <h5 class="white-text">Help</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="tel:+905524345081   ">Telephone</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Shipping</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Cancellation</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Returns</a></li>
+                    </ul>
+                </div>
+
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Policy</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Return</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Security</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Privacy</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Social</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Linkedin</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Google</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Instagram</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                &copy; 2024 Clover Store www.Clover-AAB.com
+                <a class="grey-text text-lighten-4 right" href="index22.html">Store of dress snippet</a>
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="//cdn.datatables.net/2.0.8/js/dataTables.min.js" asp-append-version="true"></script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script src="https://cdn.tiny.cloud/1/2vjp4ratj8jkrmr3nrkpkh0hzp2xir4o5se9ncycj3ulbub8/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

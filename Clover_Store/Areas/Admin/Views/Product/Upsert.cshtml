@@ -1,0 +1,153 @@
+﻿@model ProductVM
+
+
+<div class="card shadow border-0 my-4">
+    <div class="card-header bg-secondary bg-gradient ml-0 py-3">
+    <div class="row">
+        <div class="col-12 text-center">
+                <h2 class="text-white py-2">@(Model.Product.Id != 0 ? "Update" : "Create") Product</h2>
+        </div>
+    </div>
+    </div>
+    <div class="card-body p-4">
+        <form method="post" class="row" enctype="multipart/form-data">
+            
+           
+            <div class="row">
+                <div class="col-10">
+                    <div class="border p-3">
+                        @*<div asp-validation-summary="ModelOnly"></div>*@
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="Product.Title" class="form-control border-0 shadow" />
+                            <label asp-for="Product.Title" class="ms-2"></label>
+                            <span asp-validation-for="Product.Title" class="text-danger"></span>
+                        </div>
+                        <div class="py-2 col-12">
+                            <label asp-for="Product.Description" class="ms-2 text-muted"></label>
+                            <textarea asp-for="Product.Description" class="form-control border-0 shadow" > </textarea>
+                            
+                            @* <span asp-validation-for="Product.Description" class="text-danger"></span> *@
+                        </div>
+                       @*  <div class="form-floating py-2 col-12">
+                            <input asp-for="Product.Total_quantity" class="form-control border-0 shadow" />
+                            <label asp-for="Product.Total_quantity" class="ms-2"></label>
+                            <span asp-validation-for="Product.Total_quantity" class="text-danger"></span>
+                        </div> *@
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="Product.Brand_name" class="form-control border-0 shadow" />
+                            <label asp-for="Product.Brand_name" class="ms-2"></label>
+                            <span asp-validation-for="Product.Brand_name" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="Product.Type" class="form-control border-0 shadow" />
+                            <label asp-for="Product.Type" class="ms-2"></label>
+                            <span asp-validation-for="Product.Type" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating py-2 col-12">
+                            <select  asp-for="@Model.Product.CategoryID" asp-items="@Model.CategoryList" class="form-select border-0 shadow">
+                            <option disabled selected>--select Category--</option>
+                           
+                            </select>
+                            <label asp-for="Product.CategoryID" class="ms-2"></label>
+                            <span asp-validation-for="Product.CategoryID" class="text-danger"></span>
+                        </div>
+
+
+                        <div class="form-floating py-2 col-12">
+                            <select  asp-for="@Model.attribute.Size" asp-items="@Model.SizesList" class="form-select border-0 shadow">
+                                <option disabled selected>--select Size--</option>
+                            </select>
+                            <label asp-for="attribute.SizeID" class="ms-2"></label>
+                            <span asp-validation-for="attribute.SizeID" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating py-2 col-12">
+                            <select asp-for="@Model.attribute.Color" asp-items="@Model.ColorsList" class="form-select border-0 shadow">
+                                <option disabled selected>--select Color--</option>
+                            </select>
+                            <label asp-for="attribute.ColorID" class="ms-2"></label>
+                            <span asp-validation-for="attribute.ColorID" class="text-danger"></span>
+                            </div>
+                         @* <div class="form-floating py-2 col-12">
+                            <input type="file"name="file" class="form-control border-0 shadow"/>
+                            <label asp-for="@Model.attribute.Images[0]" class="ms-2"></label>
+                            @* <span asp-validation-for="image.Image_url" class="text-danger"></span>  
+                        </div> *@
+                       
+                        <div class="form-floating py-2 col-12">
+                            <input asp-for="@Model.attribute.Price" class="form-control border-0 shadow" />
+                            <label asp-for="@Model.attribute.Price" class="ms-2"></label>
+                            <span asp-validation-for="@Model.attribute.Price" class="text-danger"></span>
+                        </div>
+                      
+
+
+                           <div class="row pt-2">
+                            <div class="col-6 col-md-3">
+                                @if (Model.Product.Id != 0)
+                                {
+                                    <button type="submit" class="btn btn-primary form-control">Update</button>
+                                }
+                                else
+                                {
+                                    
+
+                                    
+                                        <button type="submit" class="btn btn-primary form-control">Create</button>
+                                       
+                                    
+                                }
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <a asp-controller="Product" asp-action="Index" class="btn btn-outline-primary border  form-control">
+                                    Back to List
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+              @*   <div class="col-2">
+                    @if (Model.Product.ProductImages != null) {
+                        foreach(var image in Model.Product.ProductImages) {
+                            <div class="border p-1 m-2 text-center">
+                                <img src="@image.ImageUrl" width="100%"
+                                     style="border-radius:5px; border:1px solid #bbb9b9" />
+                                     <a asp-action="DeleteImage" class="btn btn-danger" asp-route-imageId="@image.Id">
+                                    <i class="bi bi-trash-fill"></i> Delete
+                                     </a>
+                            </div>
+                        }
+                    }
+                    
+                </div>
+                        </div> </div> *@
+           
+        </form>
+    </div>
+</div>
+@section Scripts {
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'anchor autolink charmap codesample emoticons   lists   table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage advtemplate ai mentions tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss markdown',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough |  addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+            tinycomments_mode: 'embedded',
+            tinycomments_author: 'Author name',
+            mergetags_list: [
+                { value: 'First.Name', title: 'First Name' },
+                { value: 'Email', title: 'Email' },
+            ],
+            ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
+        });
+    </script>
+    @{
+
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+}
+
+
+
+
