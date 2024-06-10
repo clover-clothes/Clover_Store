@@ -1,191 +1,176 @@
-.x1 h1{
-   /* Clothes */
+.x1 h1 {
+  /* Clothes */
 
-position: absolute;
+  position: absolute;
 
-
-font-family: 'Times New Roman';
-font-style: normal;
-font-weight: 700;
-font-size: 40px;
-margin-top: 30px;
-color: #102C57;
+  font-family: "Times New Roman";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  margin-top: 30px;
+  color: #102c57;
 }
 
-.x1{
-height: 100px;
-align-items: center;
-background: #DAC0A3;
-
-
+.x1 {
+  height: 100px;
+  align-items: center;
+  background: #dac0a3;
 }
-body{
-    margin: 0px;
+body {
+  margin: 0px;
 }
-.S1{
-/* Rectangle 5 */
-margin-left: 300px;
-margin-top: 20px;
-position: absolute;
-width: 600px;
-height: 70px;
+.S1 {
+  /* Rectangle 5 */
+  margin-left: 300px;
+  margin-top: 20px;
+  position: absolute;
+  width: 600px;
+  height: 70px;
 
-background: #FEFAF6;
-border: 3px solid #102C57;
-border-radius: 15px;
-
+  background: #fefaf6;
+  border: 3px solid #102c57;
+  border-radius: 15px;
 }
-.Giriş{
-position: absolute;
-font-family: 'Times New Roman';
-font-style: normal;
-font-weight: 700;
-font-size: 36px;
-line-height: 44px;
-/* identical to box height */
-margin-left: 1300px  ;
-margin-top: 30px;
-color: #102C57;
-
-
+.Giriş {
+  position: absolute;
+  font-family: "Times New Roman";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  /* identical to box height */
+  margin-left: 1300px;
+  margin-top: 30px;
+  color: #102c57;
 }
 ul {
-    list-style: none; /* إزالة الرموز الافتراضية من القائمة */
-    margin: 0; /* إزالة المسافة الافتراضية حول القائمة */
-    padding: 0; /* إزالة المسافة الافتراضية داخل القائمة */
-    display: flex;
-    justify-content: space-between;
-  }
-
-  li {
-    display: inline-block; /* عرض العناصر كعناصر داخلية */
-    
-  }
-
-  .f   {
-    font-weight: bold; /* زيادة الوزن لتغميق الخط */
-    letter-spacing: 1px; /* زيادة المسافة بين الحروف */
-    display: block; /* عرض الروابط ككتل */
-    padding: 10px 37px; /* إضافة مسافة داخل الأزرار */
-    text-decoration: none; /* إزالة خط التسطير من الروابط */
-    color: #FFFFFF; /* تعيين لون النص إلى أبيض */
-    border: 1px solid #007bff; /* إضافة حد أزرق إلى الأزرار */
-    border-radius: 1px; /* تقريب زوايا الأزرار */
-    transition: background-color 0.3s ease; /* إضافة تأثير التلاشي عند التمرير فوق الأزرار */
-background: #102C57;
-
-  }
-
-  .f:hover {
-    background-color: #0056b3; /* تغيير لون الخلفية عند التمرير فوق الأزرار */
-  }
-  .x12   {
-    display: block; /* عرض الروابط ككتل */
-    font-weight: bold; /* زيادة الوزن لتغميق الخط */
-    letter-spacing: 1px; /* زيادة المسافة بين الحروف */
-    padding: 10px 20px; /* إضافة مسافة داخل الأزرار */
-    text-decoration: none; /* إزالة خط التسطير من الروابط */
-    color: #fff; /* تعيين لون النص إلى أبيض */
-    background: #102C57;
-    border: 1px solid #007bff; /* إضافة حد أزرق إلى الأزرار */
-    border-radius: 4px; /* تقريب زوايا الأزرار */
-    transition: background-color 0.3s ease; /* إضافة تأثير التلاشي عند التمرير فوق الأزرار */
-  }
-  .x12:hover {
-    background-color: #0056b3; /* تغيير لون الخلفية عند التمرير فوق الأزرار */
-  }
-.f2{
-    /* 2149133973 1 */
-    margin-left: 30px;
-margin-top: 50px;
-position: block ;
-width: 500px;
-height: 700px;
-}
-.b1{
-
-position: absolute;
-width: 300px;
-height: 10px;
-
-background: #102C57;
-/* Clothes */
-
-position: absolute;
-width: 300px;
-height: 77px;
-
-font-family: 'Times New Roman';
-font-style: normal;
-font-weight: 700;
-font-size: 64px;
-line-height: 77px;
-color: #DAC0A3;
-margin-top: 200px;
-margin-left: 174px;
-
-}
-.p1{
-    /* Alacağınız En İyi Kıyafetler */
-
-position: absolute;
-
-height: 77px;
-
-font-family: 'Times New Roman';
-font-style: normal;
-font-weight: 700;
-font-size: 55px;
-line-height: 77px;
-margin-top: -450px  ;
-margin-left: 700px;
-color: #102C57;
-
-
-}
-.a1{
-    /* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies sem vitae mi convallis, non scelerisque nisi cursus. Suspendisse ac turpis id nulla placerat scelerisque. */
-
-position: absolute;
-
-height: 102px;
-
-font-family: 'Times New Roman';
-font-style: normal;
-font-weight: 700;
-font-size: 28px;
-line-height: 34px;
-
-color: #102c57b4;
-
-margin-top: -370px;
-margin-left: 700px;
-}
-.b2{
-
-/* Keşfet */
-
-position: absolute;
-width: 220px;
-height: 69px;
-
-background: #ffffff;
-border: 4px solid #102C57; /* ضع اللون الذي تريده هنا */
-border-radius: 71px;
-font-size: 35px;
-color: #102C57;
-margin-top: 640px;
-margin-left: 174px;
+  list-style: none; /* إزالة الرموز الافتراضية من القائمة */
+  margin: 0; /* إزالة المسافة الافتراضية حول القائمة */
+  padding: 0; /* إزالة المسافة الافتراضية داخل القائمة */
+  display: flex;
+  justify-content: space-between;
 }
 
+li {
+  display: inline-block; /* عرض العناصر كعناصر داخلية */
+}
 
+.f {
+  font-weight: bold; /* زيادة الوزن لتغميق الخط */
+  letter-spacing: 1px; /* زيادة المسافة بين الحروف */
+  display: block; /* عرض الروابط ككتل */
+  padding: 10px 37px; /* إضافة مسافة داخل الأزرار */
+  text-decoration: none; /* إزالة خط التسطير من الروابط */
+  color: #ffffff; /* تعيين لون النص إلى أبيض */
+  border: 1px solid #007bff; /* إضافة حد أزرق إلى الأزرار */
+  border-radius: 1px; /* تقريب زوايا الأزرار */
+  transition: background-color 0.3s ease; /* إضافة تأثير التلاشي عند التمرير فوق الأزرار */
+  background: #102c57;
+}
 
-.pro-box{
+.f:hover {
+  background-color: #0056b3; /* تغيير لون الخلفية عند التمرير فوق الأزرار */
+}
+.x12 {
+  display: block; /* عرض الروابط ككتل */
+  font-weight: bold; /* زيادة الوزن لتغميق الخط */
+  letter-spacing: 1px; /* زيادة المسافة بين الحروف */
+  padding: 10px 20px; /* إضافة مسافة داخل الأزرار */
+  text-decoration: none; /* إزالة خط التسطير من الروابط */
+  color: #fff; /* تعيين لون النص إلى أبيض */
+  background: #102c57;
+  border: 1px solid #007bff; /* إضافة حد أزرق إلى الأزرار */
+  border-radius: 4px; /* تقريب زوايا الأزرار */
+  transition: background-color 0.3s ease; /* إضافة تأثير التلاشي عند التمرير فوق الأزرار */
+}
+.x12:hover {
+  background-color: #0056b3; /* تغيير لون الخلفية عند التمرير فوق الأزرار */
+}
+.f2 {
+  /* 2149133973 1 */
+  margin-left: 30px;
+  margin-top: 50px;
+  position: block;
+  width: 500px;
+  height: 700px;
+}
+.b1 {
+  position: absolute;
+  width: 300px;
+  height: 10px;
+
+  background: #102c57;
+  /* Clothes */
+
+  position: absolute;
+  width: 300px;
+  height: 77px;
+
+  font-family: "Times New Roman";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 77px;
+  color: #dac0a3;
+  margin-top: 200px;
+  margin-left: 174px;
+}
+.p1 {
+  /* Alacağınız En İyi Kıyafetler */
+
+  position: absolute;
+
+  height: 77px;
+
+  font-family: "Times New Roman";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 77px;
+  margin-top: -450px;
+  margin-left: 700px;
+  color: #102c57;
+}
+.a1 {
+  /* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies sem vitae mi convallis, non scelerisque nisi cursus. Suspendisse ac turpis id nulla placerat scelerisque. */
+
+  position: absolute;
+
+  height: 102px;
+
+  font-family: "Times New Roman";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+
+  color: #102c57b4;
+
+  margin-top: -370px;
+  margin-left: 700px;
+}
+.b2 {
+  /* Keşfet */
+
+  position: absolute;
+  width: 220px;
+  height: 69px;
+
+  background: #ffffff;
+  border: 4px solid #102c57; /* ضع اللون الذي تريده هنا */
+  border-radius: 71px;
+  font-size: 35px;
+  color: #102c57;
+  margin-top: 640px;
+  margin-left: 174px;
+}
+
+.pro-box {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #102C57;
+  background-color: #102c57;
   padding: 10px;
   width: 280px;
   height: 450px;
@@ -193,126 +178,163 @@ margin-left: 174px;
   margin-top: 100px;
 }
 
-.pro-img{
-  height:250px;
+.pro-img {
+  height: 250px;
   width: 250px;
   align-items: center;
 }
 
-.price-sec{
+.price-sec {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
   gap: 100px;
   align-items: center;
-
 }
-.btn{
+.btn {
   padding: 0px 20px;
-  background-color: #DAC0A3;
+  background-color: #dac0a3;
   border-radius: 10px;
-  color: #102C57;
- 
-font-family: 'Times New Roman';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 34px;
-/* identical to box height */
+  color: #102c57;
 
-color: #102C57;
+  font-family: "Times New Roman";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 34px;
+  /* identical to box height */
 
-
+  color: #102c57;
 }
 
-.pro-boxs{
+.pro-boxs {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
 }
-.title{
-margin-bottom: 0;
-margin-top: 20px;  
-margin-right: 150px;
-font-weight: 700;
-font-size: 29px;
-
-
+.title {
+  margin-bottom: 0;
+  margin-top: 20px;
+  margin-right: 150px;
+  font-weight: 700;
+  font-size: 29px;
 }
 
-.desc{
+.desc {
   font-size: 15px;
   font-weight: 700;
 }
 
-.price{
+.price {
   font-weight: 700;
   font-size: 24px;
 }
 
 /* Rectangle 23 */
 
-.ff{
+.ff {
   /* undraw_web_shopping_re_owap 1 */
 
-width: 600px;
-height: 380px;
-float: left;
-border-radius: 40px;
-margin-left: 10px;
-margin-top: 10px;
-
+  width: 600px;
+  height: 380px;
+  float: left;
+  border-radius: 40px;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 /* Etiam porttitor eros non diam ultricies, non dignissim tortor consectetur. */
 
-.pp{
-  background-color: #DAC0A3;
+.pp {
+  background-color: #dac0a3;
   justify-content: center;
   align-items: center;
-  width: 1220px; 
+  width: 1220px;
   height: 400px;
   /* Rectangle 23 */
-margin-top: 100px;
+  margin-top: 100px;
 
-box-shadow: 0px 11px 21.4px 3px rgba(58, 58, 58, 0.25);
-border-radius: 50px;
+  box-shadow: 0px 11px 21.4px 3px rgba(58, 58, 58, 0.25);
+  border-radius: 50px;
 }
-.c1{
+.c1 {
   /* Etiam porttitor eros non diam ultricies, non dignissim tortor consectetur. */
 
+  /* Etiam porttitor eros non diam ultricies, non dignissim tortor consectetur. */
 
-/* Etiam porttitor eros non diam ultricies, non dignissim tortor consectetur. */
+  position: absolute;
 
-position: absolute;
+  line-height: 0;
+  font-family: "Times New Roman";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 58px;
 
-line-height: 0;
-font-family: 'Times New Roman';
-font-style: normal;
-font-weight: 800;
-font-size: 32px;
-line-height: 58px;
-
-color: #102C57;
-margin: 0 20px 20px 0;
-margin-left: 750px;
-margin-top: -350px;}
-.footerbutton{
+  color: #102c57;
+  margin: 0 20px 20px 0;
+  margin-left: 750px;
+  margin-top: -350px;
+}
+.footerbutton {
   /* Rectangle 24 */
 
-font-family: 'Times New Roman';
-font-style: normal;
-font-weight: 600;
-font-size: 32;
-line-height: 58px;
-/* identical to box height */
+  font-family: "Times New Roman";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32;
+  line-height: 58px;
+  /* identical to box height */
 
-color: #FFFFFF;
-width: 450px;
-margin-left: 690px;
-margin-top: -60px;
-background: #102C57;
-border-radius: 25px;
+  color: #ffffff;
+  width: 450px;
+  margin-left: 690px;
+  margin-top: -60px;
+  background: #102c57;
+  border-radius: 25px;
+}
+/*Footer*/
+aside {
+  background-color: #c4ad93;
+  padding: 20px;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
 
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  font-family: Arial, sans-serif;
+}
+
+.clover-store p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+}
+
+.contact-info img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.contact-info a {
+  font-size: 16px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
 }
