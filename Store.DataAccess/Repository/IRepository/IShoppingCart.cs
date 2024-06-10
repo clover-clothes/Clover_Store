@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Store.DataAccess.Repository.IRepository
 {
-    public interface ICustomer : IRepository<Customer>
+    public interface IShoppingCart : IRepository<ShoppingCart>
     {
-        void Update(Customer obj);
+        void Update(ShoppingCart obj);
 
     }
 }

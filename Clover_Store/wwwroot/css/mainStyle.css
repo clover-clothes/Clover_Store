@@ -201,7 +201,7 @@ img {
 }
 
 .header__login-link {
-    text-decoration: underline;
+
     color: var(--color-primary-dark-1);
     font-weight: 600;
     font-size: 2rem;
@@ -653,3 +653,21 @@ button:disabled {
 
 
 
+.sepp .material-symbols-outlined {
+    font-size: 36px;
+    float: left;
+
+    margin-right: 40px;
+    margin-left: 0px;
+    display: inline-flex;
+    flex-direction:column;
+    align-items:center;
+
+
+    color: var(--color-primary-dark-1);
+    fill: var(--color-primary-dark-1);
+}
+
+    .sepp .material-symbols-outlined:hover {
+        color: rgb(1, 24, 232);
+    }

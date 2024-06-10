@@ -8,6 +8,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap"
@@ -20,7 +21,7 @@
     <header class="header">
         <div class="header__top-bar">
             <div class="header__logo">
-                <a href="#" class="header__logo--link"> <img src="~/Images/Logo1.png" width="40%" alt=""> </a>
+                <a href="#" class="header__logo--link"> <img src="~/Images/Icones/Logo.png" width="40%" alt=""> </a>
             </div>
             <form action="#" class="header__search">
                 <input type="text"
@@ -28,17 +29,30 @@
                        placeholder="Search different clothes" />
             </form>
             
+           
             <div class="header__login">
-                <a asp-controller="ShoppingCart" asp-action="cart" class="cart-icon">
+               <div style="margin-right:50px">
+
+                    <a asp-controller="ShoppingCart" asp-action="cart" class="sepp">
+                        <span class="material-symbols-outlined">
+                            shopping_cart
+                            <h3 class="sepp">My Cart</h3>
+                        </span>
+
+                    </a>
+
+                </div>
+                
+               @*  <a asp-controller="ShoppingCart" asp-action="cart" class="cart-icon">
                     <img  src="~/Images/cart-outline.svg" />
                     
-                </a><div>
-                    <pre style="font-size: large; margin-right: 200px; margin-top: 2px;">Cart</pre>
-                </div>
-               
+                </a> *@
+             
                 
-                
-                <a asp-controller="Loging" asp-action="logIn" class="header__login-link">Login</a>
+
+
+                <partial name="_LoginPartial" />
+               @*  <a asp-controller="Loging" asp-action="logIn" class="header__login-link">Login</a> *@
             </div>
         </div>
         <nav class="header__category">
@@ -100,7 +114,11 @@
                         <article class="card">
                             <a asp-action="Details" asp-route-Id="@product.Id">
                             <div class="card__image-container">
-                            <img src = "~/Images/gold.jpeg" alt="product image" class="card__image" />
+                                @if (product.attributes[0].Images.Count!=0)
+                                    {
+                                        <img src="@product.attributes.FirstOrDefault().Images.FirstOrDefault().Image_url.ToString()" alt="product image" class="card__image" />
+                                    }
+                                    
                             </div>
                                 <h3 class="card__title">@product.Title</h3>
                                 <p class="card__description">@product.Description</p>
@@ -119,7 +137,7 @@
                     <article class="card">
                         <a  asp-controller="Home" asp-action="Details">
                             <div class="card__image-container">
-                                <img src="~/Images/gold.jpeg" alt="product image" class="card__image" />
+                                <img src="/Images/brown.jpeg" alt="product image" class="card__image" />
                             </div>
                             <h3 class="card__title">Product title</h3>
                             <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>

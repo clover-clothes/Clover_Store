@@ -1,5 +1,6 @@
 
-﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Clover_Store.Models
@@ -10,6 +11,7 @@ namespace Clover_Store.Models
         public int Id { get; set; }
         public int  Quantity { get; set; }
         [ForeignKey("AttrbuteID")]
+        [ValidateNever]
         public attributes attribute { get; set; }
         public int AttrbuteID { get; set; }
         

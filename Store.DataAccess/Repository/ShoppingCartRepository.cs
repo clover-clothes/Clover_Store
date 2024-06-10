@@ -9,22 +9,19 @@ using System.Threading.Tasks;
 
 namespace Store.DataAccess.Repository
 {
-    public class CustomerRepository : Repository<Customer>, ICustomer
+    public class ShoppingCartRepository : Repository<ShoppingCart>, IShoppingCart
     {
         private ApplicationDbContext _db;
-        public CustomerRepository(ApplicationDbContext db) : base(db)
+        public ShoppingCartRepository(ApplicationDbContext db) : base(db)
         {
             _db = db;
         }
 
-        public void Save()
-        {
-            _db.SaveChanges();
-        }
+      
 
-        public void Update(Customer obj)
+        public void Update(ShoppingCart obj)
         {
-            _db.Cutomer.Update(obj);
+            _db.ShoppingCart.Update(obj);
         }
     }
 }

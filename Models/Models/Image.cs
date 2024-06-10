@@ -13,6 +13,8 @@ namespace Clover_Store.Models
         public int attributId { get; set; }
         [ForeignKey("attributId")]
         
+
         public attributes attributes { get; set; }
+
     }
 }

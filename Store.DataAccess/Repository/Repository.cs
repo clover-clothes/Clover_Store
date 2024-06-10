@@ -25,23 +25,40 @@ namespace Store.DataAccess.Repository
            dbSet.Add(entity);
         }
 
-        public T Get(Expression<Func<T, bool>> filter, string? includeProperties = null)
-        {
-            IQueryable<T> query = dbSet;
-            query = query.Where(filter);
-            if (!string.IsNullOrEmpty(includeProperties))
-            {
-                foreach (var property in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
-                {
-                    query = query.Include(property);
-                }
+        public T Get(Expression<Func<T, bool>> filter, string? includeProperties = null,bool track=false)
+        { IQueryable<T> query;
+            if(track){
+                query = dbSet;
+
             }
-            return query.FirstOrDefault();
+            else
+            {
+                 query = dbSet.AsNoTracking();
+  
+            }
+
+                 query = query.Where(filter);
+                if (!string.IsNullOrEmpty(includeProperties))
+                {
+                    foreach (var property in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                    {
+                        query = query.Include(property);
+                    }
+                }
+           return query.FirstOrDefault();
+
         }
 
-        public IEnumerable<T> GetAll(string? includeProperties = null)
+       
+
+        public IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter=null, string? includeProperties = null)
         {
             IQueryable<T> query = dbSet;
+            if (filter!=null)
+            {
+                query= query.Where(filter);
+            }
+           
             if (!string.IsNullOrEmpty(includeProperties))
             {
                 foreach (var property in includeProperties.Split(new char[] {','},StringSplitOptions.RemoveEmptyEntries)) {
@@ -49,6 +66,11 @@ namespace Store.DataAccess.Repository
                 }
             }
             return query.ToList();
+        }
+
+        public IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter = null, string? includeProperties = null, bool track = false)
+        {
+            throw new NotImplementedException();
         }
 
         public void Remove(T entity)

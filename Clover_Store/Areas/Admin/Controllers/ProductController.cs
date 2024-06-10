@@ -5,10 +5,13 @@ using Microsoft.AspNetCore.Mvc;
 using Store.DataAccess.Repository;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Store.Models.Models.ViewModels;
+using Microsoft.AspNetCore.Authorization;
+using Store.Utility;
 
 namespace Clover_Store.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles =SD.Role_Admin)]
     public class ProductController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -21,6 +24,7 @@ namespace Clover_Store.Areas.Admin.Controllers
         public IActionResult Index()
         {
             List<Product> objProduct = _unitOfWork.product.GetAll(includeProperties:"Category").ToList();
+
             return View(objProduct);
         }
        
@@ -38,7 +42,7 @@ namespace Clover_Store.Areas.Admin.Controllers
                     Text = u.Name,
                     Value = u.Id.ToString()
                 }),
-                SizesList = _unitOfWork.Colors.GetAll().Select(u => new SelectListItem
+                SizesList = _unitOfWork.Sizes.GetAll().Select(u => new SelectListItem
                 {
                     Text = u.Name,
                     Value = u.Id.ToString()

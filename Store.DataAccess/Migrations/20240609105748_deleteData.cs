@@ -7,7 +7,7 @@
 namespace Clover_Store.Migrations
 {
     /// <inheritdoc />
-    public partial class seedImageTables : Migration
+    public partial class deleteData : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -226,54 +226,11 @@ namespace Clover_Store.Migrations
                 table: "Categorys",
                 keyColumn: "Id",
                 keyValue: 7);
-
-            migrationBuilder.InsertData(
-                table: "Image",
-                columns: new[] { "Id", "Image_url", "attributId" },
-                values: new object[,]
-                {
-                    { 1, "~/Images/product/Screenshot 2024-06-06 160542.png", 1 },
-                    { 2, "~/Images/product/Screenshot 2024-06-06 161345.png", 2 },
-                    { 3, "~/Images/product/Screenshot 2024-06-06 160542.png", 3 },
-                    { 4, "~/Images/product/Screenshot 2024-06-06 160542.png", 4 },
-                    { 5, "~/Images/product/Screenshot 2024-06-06 160542.png", 5 },
-                    { 6, "~/Images/product/Screenshot 2024-06-06 160542.png", 6 }
-                });
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DeleteData(
-                table: "Image",
-                keyColumn: "Id",
-                keyValue: 1);
-
-            migrationBuilder.DeleteData(
-                table: "Image",
-                keyColumn: "Id",
-                keyValue: 2);
-
-            migrationBuilder.DeleteData(
-                table: "Image",
-                keyColumn: "Id",
-                keyValue: 3);
-
-            migrationBuilder.DeleteData(
-                table: "Image",
-                keyColumn: "Id",
-                keyValue: 4);
-
-            migrationBuilder.DeleteData(
-                table: "Image",
-                keyColumn: "Id",
-                keyValue: 5);
-
-            migrationBuilder.DeleteData(
-                table: "Image",
-                keyColumn: "Id",
-                keyValue: 6);
-
             migrationBuilder.InsertData(
                 table: "Categorys",
                 columns: new[] { "Id", "Details", "Name" },
@@ -334,7 +291,7 @@ namespace Clover_Store.Migrations
                 {
                     { 1, "LCW", 1, "Made from waffle fabric, this t-shirt offers a stylish and modern look with its polo collar design.\r\n With its soft and comfortable texture,\r\n it can be preferred both in daily life and on special occasions.", "100% Cotton", "Polo Yaka Kısa Kollu Pike Erkek Tişört", 13, "Male" },
                     { 2, "adidas", 5, "It is made of durable and easy-care polyester fabric.\r\n Its short sleeve design keeps you cool and comfortable even in hot weather conditions.", "100% Cotton", "Regular Fit Men's Short Sleeve Shirt", 13, "Male" },
-                    { 3, "ZARA", 7, "Round neck, straight short sleeve oversize tunic, made of single jersey fabric. It provides coolness in summer with its light and breathable structure. \r\nIts oversize cut provides freedom of movement and is designed in hip-length length so that you can move comfortably.", "100% Cotton", "Crew Neck Plain Short Sleeve Oversize Women's Tunic", 13, "Male" }
+                    { 3, "ZARA", 7, "Round neck, straight short sleeve oversize tunic, made of single jersey fabric. It provides coolness in summer with its light and breathable structure.", "100% Cotton", "Crew Neck Plain Short Sleeve Oversize Women's Tunic", 13, "Male" }
                 });
 
             migrationBuilder.InsertData(

@@ -25,13 +25,13 @@ namespace Clover_Store.Areas.Customerr.Controllers
         [HttpPost]
         public IActionResult signUp(Customer obj)
         {
-            obj.Log_date = DateTime.Now;
-            if (ModelState.IsValid)
-            {
-                _unitOfWork.Customer.Add(obj);
-                _unitOfWork.Save();
-                return RedirectToAction("Index", "Home");
-            }
+            //obj.Log_date = DateTime.Now;
+            //if (ModelState.IsValid)
+            //{
+            //    _unitOfWork.Customer.Add(obj);
+            //    _unitOfWork.Save();
+            //    return RedirectToAction("Index", "Home");
+            //}
 
             return View();
         }

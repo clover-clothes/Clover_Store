@@ -24,5 +24,6 @@ namespace Clover_Store.Models
         [ValidateNever]
         public List<attributes> attributes { get; set;}
 
+
     }
 }
