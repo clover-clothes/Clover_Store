@@ -367,113 +367,106 @@ img {
   font-size: 1.6rem;
   margin-bottom: 4.8rem;
 }
-<<<<<<< HEAD
 .center {
-=======
-.center{
->>>>>>> 9ab82ffaba29439bf487c6df97e9b1680b99d0ca
-  background-color: #70809a;
-  margin-left: 350px;
-  text-align: center;
-  font-size: large;
-  border-radius: 10px;
-  width: 50%;
-  margin-top: 100px;
-<<<<<<< HEAD
+  .center {
+    background-color: #70809a;
+    margin-left: 350px;
+    text-align: center;
+    font-size: large;
+    border-radius: 10px;
+    width: 50%;
+    margin-top: 100px;
+  }
+  #s1 {
+    width: 1000px;
+  }
+  /* CTO Section style (end) */
+
+  /* Home page style (end) */
+
+  .page-footer {
+    background-color: #c4ad93;
+    color: #ffffff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .page-footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .page-footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .page-footer .col {
+    margin-bottom: 20px;
+  }
+
+  .page-footer .col.l6 {
+    flex: 0 0 48%;
+    color: white;
+  }
+
+  .page-footer .col.l4 {
+    flex: 0 0 10%;
+  }
+
+  .page-footer h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .page-footer ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .page-footer ul li {
+    margin-bottom: 5px;
+  }
+
+  .page-footer a {
+    color: #b0bec5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .page-footer a:hover {
+    color: #ffffff;
+  }
+
+  .footer-copyright {
+    background-color: #1a252f;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .footer-copyright a {
+    color: #b0bec5;
+    text-decoration: none;
+  }
+
+  .footer-copyright a:hover {
+    color: #ffffff;
+  }
 }
 #s1 {
   width: 1000px;
 }
-/* CTO Section style (end) */
-
-/* Home page style (end) */
-
-.page-footer {
-  background-color: #c4ad93;
-  color: #ffffff;
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-.page-footer .container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.page-footer .row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.page-footer .col {
-  margin-bottom: 20px;
-}
-
-.page-footer .col.l6 {
-  flex: 0 0 48%;
-  color: white;
-}
-
-.page-footer .col.l4 {
-  flex: 0 0 10%;
-}
-
-.page-footer h5 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.page-footer ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.page-footer ul li {
-  margin-bottom: 5px;
-}
-
-.page-footer a {
-  color: #b0bec5;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.page-footer a:hover {
-  color: #ffffff;
-}
-
-.footer-copyright {
-  background-color: #1a252f;
-  padding: 10px 0;
-  text-align: center;
-}
-
-.footer-copyright a {
-  color: #b0bec5;
-  text-decoration: none;
-}
-
-.footer-copyright a:hover {
-  color: #ffffff;
-}
-=======
-  
-}
-#s1{
-  width: 1000px;
-}
 .sepp .material-symbols-outlined {
-  font-size: 36px; 
+  font-size: 36px;
   float: right;
 }
 .sepp .material-symbols-outlined:hover {
-  color: rgb(1, 24, 232); 
+  color: rgb(1, 24, 232);
 }
 /* CTO Section style (end) */
 
 /* Home page style (end) */
->>>>>>> 9ab82ffaba29439bf487c6df97e9b1680b99d0ca
