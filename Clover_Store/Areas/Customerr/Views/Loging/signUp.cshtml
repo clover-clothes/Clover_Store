@@ -14,32 +14,73 @@
     <link rel="stylesheet" type="text/css" href="~/css/mainStyle.css">
 </head>
 <body>
+    <!-- header start -->
     <header class="header">
         <div class="header__top-bar">
             <div class="header__logo">
-                <a asp-area="Customerr" asp-controller="Home" asp-action="Index" class="header__logo--link"> <img src="~/Images/Logo1.png" width="40%" alt=""> </a>
+                <a href="#" class="header__logo--link"> <img src="~/Images/Icones/Logo.png" width="40%" alt=""> </a>
             </div>
             <form action="#" class="header__search">
                 <input type="text"
                        class="header__search-input"
                        placeholder="Search different clothes" />
             </form>
+
+
             <div class="header__login">
-                <a asp-controller="Loging" asp-action="logIn" class="header__login-link">Login</a>
+                <div style="margin-right:10px;margin-left:10px">
+
+                    <a asp-controller="ShoppingCart" asp-action="cart" class="sepp">
+
+                        <span class="material-symbols-outlined">
+                            shopping_cart
+                            <h3 class="sepp" style="font-size:15px">
+                                My Cart
+                                (0)
+                            </h3>
+                        </span>
+
+
+
+
+                    </a>
+
+                </div>
+                <div style="margin-right:10px">
+
+                    <a asp-action="Favorrites" class="sepp">
+                        <span class="material-symbols-outlined">
+                            favorite
+                            <h3 class="sepp" style="font-size:15px">My Fav0rites</h3>
+                        </span>
+
+                    </a>
+
+                </div>
+
+                @*  <a asp-controller="ShoppingCart" asp-action="cart" class="cart-icon">
+                <img  src="~/Images/cart-outline.svg" />
+
+                </a> *@
+
+
+
+
+                <partial name="_LoginPartial" />
+                @*  <a asp-controller="Loging" asp-action="logIn" class="header__login-link">Login</a> *@
             </div>
         </div>
         <nav class="header__category">
-            <a href="#" class="btn btn--link">Men</a>
-            <a href="#" class="btn btn--link">Women</a>
-            <a href="#" class="btn btn--link">Kid</a>
-            <a href="#" class="btn btn--link">Sport</a>
-            <a href="#" class="btn btn--link">Dress</a>
-            <a href="#" class="btn btn--link">Pants</a>
-            <a href="#" class="btn btn--link">Skirt</a>
-            <a href="#" class="btn btn--link">Undreware</a>
-            <a href="#" class="btn btn--link">Shirt</a>
-            <a href="#" class="btn btn--link">Sweat</a>
-            <a href="#" class="btn btn--link">Shoes</a>
+            <a asp-controller="Categorys" asp-action="Index" asp-route-type="Male" class="btn btn--link">Men</a>
+            <a asp-controller="Categorys" asp-action="Index" asp-route-type="Female" class="btn btn--link">Women</a>
+            <a asp-controller="Categorys" asp-action="Index" asp-route-type="Kids" class="btn btn--link">Kid</a>
+            <a asp-controller="Categorys" asp-action="Index" asp-route-categoryId="1" class="btn btn--link">Pants</a>
+            <a asp-controller="Categorys" asp-action="Index" asp-route-categoryId="4" class="btn btn--link">Skirt</a>
+            <a asp-controller="Categorys" asp-action="Index" asp-route-categoryId="5" class="btn btn--link">Shirt</a>
+            <a asp-controller="Categorys" asp-action="Index" asp-route-categoryId="6" class="btn btn--link">Sweat</a>
+            <a asp-controller="Categorys" asp-action="Index" asp-route-categoryId="3" class="btn btn--link">Dress</a>
+            <a asp-controller="Categorys" asp-action="Index" asp-route-categoryId="8" class="btn btn--link">Coat</a>
+            <a asp-controller="Categorys" asp-action="Index" asp-route-categoryId="2" class="btn btn--link">Sport</a>
 
         </nav>
     </header>

@@ -4,7 +4,144 @@
     ViewData["Title"] = "Register";
 }
 
-<h1>@ViewData["Title"]</h1>
+
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <style>
+
+        /*  body {
+                    background-color: #DAC0A3 #102C57;
+                } */
+    </style>
+    <link rel="stylesheet" type="text/css" href="~/css/mainStyle.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="header__top-bar">
+            <div class="header__logo">
+                <a asp-area="Customerr" asp-controller="Home" asp-action="Index" class="header__logo--link"> <img src="~/Images/Logo1.png" width="40%" alt=""> </a>
+            </div>
+            <form action="#" class="header__search">
+                <input type="text"
+                       class="header__search-input"
+                       placeholder="Search different clothes" />
+            </form>
+            <div class="header__login">
+            </div>
+        </div>
+        <nav class="header__category">
+            <a href="#" class="btn btn--link">Men</a>
+            <a href="#" class="btn btn--link">Women</a>
+            <a href="#" class="btn btn--link">Kid</a>
+            <a href="#" class="btn btn--link">Sport</a>
+            <a href="#" class="btn btn--link">Dress</a>
+            <a href="#" class="btn btn--link">Pants</a>
+            <a href="#" class="btn btn--link">Skirt</a>
+            <a href="#" class="btn btn--link">Undreware</a>
+            <a href="#" class="btn btn--link">Shirt</a>
+            <a href="#" class="btn btn--link">Sweat</a>
+            <a href="#" class="btn btn--link">Shoes</a>
+
+        </nav>
+    </header>
+
+
+    <form asp-page-handler="Confirmation" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+
+        <h1>@ViewData["Title"]</h1>
+        <h2 id="external-login-title">Associate your @Model.ProviderDisplayName account.</h2>
+        <hr />
+
+        <p id="external-login-description" class="text-info">
+            You've successfully authenticated with <strong>@Model.ProviderDisplayName</strong>.
+            Please enter an email address for this site below and click the Register button to finish
+            logging in.
+        </p>
+
+        <div class="register-container">
+
+            <h1 class="reg__title">Create a new account</h1>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <div class="input-group">
+
+                <label asp-for="Input.Email">Email</label>
+                <input asp-for="Input.Email" autocomplete="username" aria-required="true" placeholder="name@example.com" style="border-radius: 9px;" />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+          @*   <div class="input-group">
+
+                <label asp-for="Input.Password">Password</label>
+                <input asp-for="Input.Password" autocomplete="new-password" aria-required="true" placeholder="password" style="border-radius: 9px;" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="input-group">
+
+                <label asp-for="Input.ConfirmPassword">Confirm Password</label>
+                <input asp-for="Input.ConfirmPassword" autocomplete="new-password" aria-required="true" placeholder="password" style="border-radius: 9px;" />
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div> *@
+            <div class="input-group">
+
+                <label asp-for="Input.fullName">Full Name</label>
+                <input asp-for="Input.fullName" placeholder="" style="border-radius: 9px;" />
+                <span asp-validation-for="Input.fullName" class="text-danger"></span>
+            </div>
+            <div class="input-group">
+
+                <label asp-for="Input.PhoneNumber">Phone Number</label>
+                <input asp-for="Input.PhoneNumber" placeholder="05.." style="border-radius: 9px;" />
+                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="input-group">
+
+                <label asp-for="Input.adres">Adres</label>
+                <input asp-for="Input.adres" placeholder="City name,Street name,Building number.." style="border-radius: 9px;" />
+                <span asp-validation-for="Input.adres" class="text-danger"></span>
+            </div>
+            <div class="input-group">
+                <select asp-for="Input.Gender">
+                    <option disabled selected>-Select Gender-</option>
+                    <option>Male</option>
+                    <option>Female</option>
+
+                </select>
+            </div>
+        
+            <button type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+        </div>
+        </form>
+
+   
+    @section Scripts {
+            <partial name="_ValidationScriptsPartial" />
+    }
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@* <h1>@ViewData["Title"]</h1>
 <h2 id="external-login-title">Associate your @Model.ProviderDisplayName account.</h2>
 <hr />
 
@@ -23,6 +160,26 @@
                 <label asp-for="Input.Email" class="form-label"></label>
                 <span asp-validation-for="Input.Email" class="text-danger"></span>
             </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Email" class="form-control" autocomplete="email" placeholder="Please enter your email." />
+                <label asp-for="Input.Email" class="form-label"></label>
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Email" class="form-control" autocomplete="email" placeholder="Please enter your email." />
+                <label asp-for="Input.Email" class="form-label"></label>
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Email" class="form-control" autocomplete="email" placeholder="Please enter your email." />
+                <label asp-for="Input.Email" class="form-label"></label>
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Email" class="form-control" autocomplete="email" placeholder="Please enter your email." />
+                <label asp-for="Input.Email" class="form-label"></label>
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
             <button type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
         </form>
     </div>
@@ -31,3 +188,4 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
+ *@

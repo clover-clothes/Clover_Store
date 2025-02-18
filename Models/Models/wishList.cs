@@ -9,9 +9,9 @@ namespace Clover_Store.Models
         [Key]
         public int Id { get; set; }
         
-        public int CustomerID { get; set; }
+        public string CustomerID { get; set; }
         [ForeignKey("CustomerID")]
-        public Customer Customer { get; set; }
+        public CustomerUsers Customer { get; set; }
         public int ProductID { get; set; }
         [ForeignKey("ProductID")]
         public Product Product { get; set; }

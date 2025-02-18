@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 
 namespace Store.Models.Models.ViewModels
 {
-    public class ShoppingCartVM
+    public class wishlistVM
         
-    {public IEnumerable<ShoppingCart> shoppingCartList { get; set;}
-        public double OrderTotal {  get; set;}  
-        public ShoppingCartVM() { }
+    {
+        public IEnumerable<wishList> FWishList { get; set;}
+        public decimal OrderTotal {  get; set;}  
+        public wishlistVM() { }
     }
 }

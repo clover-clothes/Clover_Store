@@ -1,5 +1,6 @@
 using Clover_Store.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Store.DataAccess.Repository;
 using Store.DataAccess.Repository.IRepository;
@@ -15,6 +16,7 @@ namespace Clover_Store.Areas.Customerr.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IUnitOfWork _unitOfWork;
+        public CategorysVM categorysVM { get; set; }
 
         public HomeController(ILogger<HomeController> logger,IUnitOfWork unitOfWork)
         {
@@ -24,6 +26,14 @@ namespace Clover_Store.Areas.Customerr.Controllers
 
         public IActionResult Index()
         {
+
+           
+            var claimsIdentity = (ClaimsIdentity)User.Identity;
+            var user = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+            if (user!=null)
+            {
+                HttpContext.Session.SetInt32(SD.Seccioncart, _unitOfWork.ShoppingCart.GetAll(u => u.CustomerUId == user.Value).Count());
+            }
 
             IEnumerable<Product> productsList = _unitOfWork.product.GetAll(includeProperties: "Category,attributes");
             foreach (Product product in productsList)
@@ -46,8 +56,7 @@ namespace Clover_Store.Areas.Customerr.Controllers
                 att.Color = _unitOfWork.Colors.Get(u => u.Id == att.ColorID);
                 att.Size = _unitOfWork.Sizes.Get(u => u.Id == att.SizeID);
                 att.Images = _unitOfWork.Image.GetAll(u => u.attributId == att.Id).ToList();
-                //att.Product = products;
-                //att.ProductID = id;
+
                 
             }
             ShoppingCart item = new()
@@ -55,7 +64,7 @@ namespace Clover_Store.Areas.Customerr.Controllers
                 attribut = products.attributes[0],
                 AttributId = products.attributes[0].Id,
                 quantity = 1,
-                Price = (double)products.attributes[0].Price
+                Price = products.attributes[0].Price
 
 
             };
@@ -76,7 +85,13 @@ namespace Clover_Store.Areas.Customerr.Controllers
             if (cartFromDb != null)
             {
                 //shopping cart exists
-                cartFromDb.quantity += shoppingCart.quantity;
+                if (shoppingCart.quantity>=_unitOfWork.attributes.Get(u=>u.Id==shoppingCart.AttributId).Quantity)
+                {
+                    cartFromDb.quantity = shoppingCart.attribut.Quantity;
+                }
+                else { 
+                cartFromDb.quantity += shoppingCart.quantity;}
+
                 _unitOfWork.ShoppingCart.Update(cartFromDb);
                 _unitOfWork.Save();
             }
@@ -85,16 +100,27 @@ namespace Clover_Store.Areas.Customerr.Controllers
                 //add cart record
                 _unitOfWork.ShoppingCart.Add(shoppingCart);
                 _unitOfWork.Save();
+                HttpContext.Session.SetInt32(SD.Seccioncart, _unitOfWork.ShoppingCart.GetAll(u => u.CustomerUId == userId).Count());
+               
                 //HttpContext.Session.SetInt32(SD.SessionCart,
                 //_unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == userId).Count());
             }
             TempData["success"] = "Cart updated successfully";
 
-
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Details)) ;
         }
 
 
+        public IActionResult Favorites()
+        {
+            var claimsIdentity = (ClaimsIdentity)User.Identity;
+            var userId = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+
+
+            return View();
+        }
+     
 
 
         public IActionResult Privacy()

@@ -16,8 +16,6 @@ namespace Store.Models.Models.ViewModels
         [ValidateNever]
         public attributes attribute { get; set; }
         [ValidateNever]
-        public Image image { get; set; }
-        [ValidateNever]
         public IEnumerable<SelectListItem> CategoryList {  get; set; }
         [ValidateNever]
         public IEnumerable<SelectListItem> SizesList { get; set; }

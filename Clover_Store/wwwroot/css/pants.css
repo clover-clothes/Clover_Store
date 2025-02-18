@@ -1,0 +1,290 @@
+*{
+    box-sizing: border-box;
+}
+
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+
+}
+.header{
+  width: 80%;
+    gap: 210px;
+    padding: 20px;
+    display: flex;
+    float: inline-end;
+    margin-right: 250px;
+}
+.dropdown {
+   float: left;
+  align-items: center;
+  display: flex;
+  margin-left: 490px;
+padding: 20px;
+  }
+  
+  .dropdown-btn {
+    background-color: white;
+    border: 2px solid #001f49; /* Adjust the color to match your design */
+    border-radius: 15px; /* Rounded corners */
+    padding: 10px 20px; /* Padding inside the button */
+    font-size: 16px;
+    color: #001f49; /* Text color */
+    cursor: pointer;
+    align-items: center;
+    width: 200px;
+    display: block;
+    
+   }
+  
+ 
+  
+  .dropdown-content2 {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    margin-top: 190px;
+  }
+  
+  .dropdown-content2 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content2 a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+.menu{
+   
+}
+.container2 {
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    padding-inline: 1.6rem;
+    display: flex;
+    flex-wrap: wrap; /* للسماح للعناصر بالانتقال إلى السطر التالي إذا لم يكن هناك مساحة كافية */
+    gap: 10px; /* المسافة بين البطاقات */
+    margin-left: 20px;
+  }
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    gap: 8rem;
+    flex: 1 1 200px; /* يجعل البطاقات تتوسع وتتناقص مع الحفاظ على عرض أساسي 200px */
+    box-sizing: border-box;
+    
+
+  }
+  .favorite-icon {
+ align-items: center;
+
+    font-size: 24px;
+    color: rgb(167, 0, 0);
+   
+  }
+    .favorite-container2 {
+            display: flex;
+            align-items: center;
+        }
+        .favorite-icon {
+            padding-left: 10px;
+        }
+        .material-symbols-outlined {
+            font-size: 24px;
+            color: red;
+        }
+  
+  .favorite-icon .material-icons-outlined {
+    font-size: 48px; /* حجم الأيقونة */
+    color: red; /* لون القلب */
+  }
+  
+  .favorite-icon.active .material-icons-outlined {
+    color: red; /* لون القلب بعد الضغط */
+    content: "favorite"; /* تغيير الأيقونة إلى القلب الممتلئ */
+  }
+  
+  .card {
+    padding: 1rem;
+    border-radius: 15px;
+  height: 480px;
+  }
+  
+.card__image-container2 {
+    overflow: hidden;
+    border-radius: 7.5px;
+    margin-bottom: 1.2rem;
+  }
+  
+  .card__image {
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .card__title {
+    font-size: 1.8rem;
+    margin-bottom: .4rem;
+    color: #FFFFFF;
+
+  }
+  
+  .card__description {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    color: #FFFFFF;
+    /* Etiam porttitor eros non diam ultricies, non dignissim tortor consectetur. */
+
+
+
+
+  }
+  
+  .card__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;
+    padding: .8rem;
+  }
+  
+  .card__price {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-top: -10px;
+    color: #FFFFFF;
+  }
+  
+  .card__price--symbol {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+  
+  .card__btn {
+  /* Rectangle 22 */
+font-size: 15px;
+margin-top: -35px;
+
+background: #DAC0A3;
+border-radius: 15px;
+
+
+  }
+  
+  .card__btn:hover {
+    background: #3606f5;
+
+  }
+  .col-6.col-s-9 {
+    display: flex;
+    flex-wrap: wrap; /* لضمان التفاف العناصر عند انتهاء العرض المتاح */
+    justify-content: space-around; /* لضبط المسافات بين العناصر */
+  }
+  
+  .product-grid {
+    flex: 1 1 20%; /* لجعل كل عنصر يأخذ حوالي 30% من العرض المتاح */
+    margin: 5px; /* لإضافة بعض المسافة بين العناصر */
+    background-color: #102C57/* Rectangle 21 */
+
+   
+  }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+
+}
+
+.sidebar {
+    height: 100vh;
+    width: 200px;
+    background-color: white;
+    border-right: 2px solid #102C57;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .logo {
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.sidebar-nav {
+    flex: 1;
+    width: 100%;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    width: 100%;
+}
+
+.sidebar-nav ul li {
+    margin: 10px 0;
+    padding: 30px;
+
+}
+
+.sidebar-nav ul li a {
+    text-decoration: none;
+    color: #102C57;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+}
+.hh2{
+  width: 80%;
+  margin-left: 00px;
+  flex-direction: row;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 100px;
+  
+  
+}
+.sidebar{
+  display: inline-block;
+}
+.row{
+}
+#myBtn {
+  display: none; /* مخفي بشكل افتراضي */
+  position: fixed; /* وضع/موقع ثابت */
+  top: 500px; /* ضع الزر في أعلى الصفحة */
+  right: 30px; /* ضع الزر 30 بكسل من اليمين */
+  z-index: 99; /* تأكد من أنه لا يتداخل */
+  border: none; /* إزالة الحدود */
+  outline: none; /* إزالة الخط الخارجي */
+  background-color: #007bff; /* تعيين لون الخلفية */
+  color: white; /* لون النص */
+  cursor: pointer; /* أضف مؤشر الماوس عند التحويم */
+  padding: 15px; /* بعض الحشو */
+  border-radius: 10px; /* زوايا دائرية */
+  font-size: 24px; /* زيادة حجم الخط */
+  transform: rotate(90deg); /* تدوير الزر 90 درجة */
+  
+}
+#myBtn {
+  /* ... */
+  background-image: url('images/arrow-up-icon.png'); /* أيقونة سهم لأعلى */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60px; /* حجم الأيقونة */
+}
+#myBtn:hover {
+  background-color: #0056b3; /* أضف خلفية رمادية داكنة عند التحويم */
+}

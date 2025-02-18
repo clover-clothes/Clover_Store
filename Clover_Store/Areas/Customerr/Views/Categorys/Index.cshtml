@@ -1,0 +1,246 @@
+﻿@model CategorysVM
+
+
+
+<div class="container-fluid mt-5 mb-5">
+    <div class="row g-2">
+        <div class="col-md-3">
+            <img src="~/Images/Icones/logooo-r.png" alt="Logo" class="logo">
+            <div class="t-products p-2">
+                <h4 class="text-uppercase">Categorys</h4>
+                <div class="p-lists">
+                    @foreach (var item in Model.categoryList)
+                    {
+                        <a asp-action="Index" asp-route-categoryId="@item.Id" class="links"> <div class="categorys d-flex justify-content-between mt-2"> <span>@item.Name</span> <span>@item.proQuantity</span> </div></a>
+                    }
+                  
+                </div>
+            </div>
+            <div class="processor p-2">
+                <div class="heading d-flex justify-content-between align-items-center">
+                    <h6 class="text-uppercase">Size</h6> <span>--</span>
+                </div>
+
+                    @foreach (var item in Model.sizeList)
+                {
+
+                     <div class="d-flex justify-content-between mt-2">
+                    <div class="form-check"> <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"> <label class="form-check-label" for="flexCheckDefault"> @item.Name </label> </div> <span></span>
+                    </div>
+                }
+               
+          
+            </div>
+            <div class="brand p-2">
+                <div class="heading d-flex justify-content-between align-items-center">
+                    <h6 class="text-uppercase">Brand</h6> <span>--</span>
+                </div>
+                <div class="d-flex justify-content-between mt-2">
+                    <div class="form-check"> <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"> <label class="form-check-label" for="flexCheckDefault"> LCW </label> </div> <span>13</span>
+                </div>
+                <div class="d-flex justify-content-between mt-2">
+                    <div class="form-check"> <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked> <label class="form-check-label" for="flexCheckChecked"> FLO </label> </div> <span>4</span>
+                </div>
+                <div class="d-flex justify-content-between mt-2">
+                    <div class="form-check"> <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked> <label class="form-check-label" for="flexCheckChecked"> Mavi </label> </div> <span>24</span>
+                </div>
+                <div class="d-flex justify-content-between mt-2">
+                    <div class="form-check"> <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked> <label class="form-check-label" for="flexCheckChecked"> adidas </label> </div> <span>18</span>
+                </div>
+                <div class="d-flex justify-content-between mt-2">
+                    <div class="form-check"> <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked> <label class="form-check-label" for="flexCheckChecked"> ZARA </label> </div> <span>44</span>
+                </div>
+            </div>
+            <div class="type p-2 mb-2">
+                <div class="heading d-flex justify-content-between align-items-center">
+                    <h6 class="text-uppercase">Color</h6> <span>--</span>
+                </div>
+
+                @foreach (var item in Model.colorList)
+                { 
+                    <div class="d-flex justify-content-between mt-2">
+                    <div class="form-check"> <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"> <label class="form-check-label" for="flexCheckDefault"> @item.Name</label> </div> <span></span>
+                     </div>
+
+                }
+               
+               
+            </div>
+            <div class="type p-2 mb-2">
+                <div class="heading d-flex justify-content-between align-items-center">
+                    <h6 class="text-uppercase">Type</h6> <span>--</span>
+                </div>
+                <div class="d-flex justify-content-between mt-2">
+                    <div class="form-check"> <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"> <label class="form-check-label" for="flexCheckDefault"> Male </label> </div> <span></span>
+                </div>
+                <div class="d-flex justify-content-between mt-2">
+                    <div class="form-check"> <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"> <label class="form-check-label" for="flexCheckDefault"> Female </label> </div> <span></span>
+                </div>
+                <div class="d-flex justify-content-between mt-2">
+                    <div class="form-check"> <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"> <label class="form-check-label" for="flexCheckDefault"> Kids </label> </div> <span></span>
+                </div>
+               
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="row g-2">
+                    @foreach (var item in Model.productList)
+                {
+                    <div class="col-md-4">
+                        <a asp-controller="Home" asp-action="Details" asp-route-Id="@item.Id" class="links">
+
+                            <div class="product py-4">
+                                <div class="text-center">
+                                    @if (@item.attributes[0].Images.Count > 0)
+                                    {
+                                        <img src="@item.attributes[0].Images[0].Image_url" width="200">
+                                    }
+                                </div>
+                                <div class="about text-center">
+                                    <h5 style="color:#212529">@item.Title</h5> <span style="color:">TL @item.attributes[0].Price</span>
+                                </div>
+                                <div class="cart-button mt-3 px-2 d-flex justify-content-between align-items-center">
+                                    <button class="cartBtn btn btn-primary text-uppercase">Add to cart</button>
+                                    <div class="add"> <span class="product_fav"><i class="fa fa-heart-o"></i></span> </div>
+                                </div>
+                            </div>
+                        </a>
+                    
+                </div>
+                }
+             
+             
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<style>
+    body {
+        background-color: #e7eaee;
+    }
+    .logo{
+        width: 50%;
+        margin-bottom: 40px;
+        margin-left: 100px;
+    }
+
+    .t-products {
+        background-image: linear-gradient(to right top, #e7eaee, #e7eaee, #e7eaee, #e7eaee, #e7eaee);
+        color: #102c57;
+        border-radius: 3px
+    }
+
+    .categorys {
+        margin-top: 3rem !important;
+        font-size: 20px;
+        font-weight:600;
+        margin-left:40px;
+    }
+    .links{
+        color: #102c57;
+        text-decoration: unset;
+    }
+    .cartBtn{
+        background-color: #102c57 !important;
+
+    }
+
+    .processor {
+        background-color: #fff;
+        margin-top: 5px;
+        border-bottom: 1px solid #eee
+    }
+
+    .brand {
+        background-color: #fff;
+        border-bottom: 1px solid #eee
+    }
+
+    .type {
+        background-color: #fff
+    }
+
+    .product {
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 5px;
+        position: relative
+    }
+
+    .about span {
+        color: #102c57;
+        font-size: 16px;
+        font-weight:500;
+    }
+
+    .cart-button button {
+        font-size: 12px;
+        color: #fff;
+        background-color: #5629c0;
+        height: 38px
+    }
+
+        .cart-button button:focus,
+        button:active {
+            font-size: 12px;
+            color: #fff;
+            background-color: #5629c0;
+            box-shadow: none
+        }
+
+    .product_fav i {
+        line-height: 40px;
+        color: #5629c0;
+        font-size: 15px
+    }
+
+    .product_fav {
+        display: inline-block;
+        width: 36px;
+        height: 39px;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 11%;
+        text-align: center;
+        cursor: pointer;
+        margin-left: 3px;
+        -webkit-transition: all 200ms ease;
+        -moz-transition: all 200ms ease;
+        -ms-transition: all 200ms ease;
+        -o-transition: all 200ms ease;
+        transition: all 200ms ease
+    }
+
+        .product_fav:hover {
+            background: #5629c0
+        }
+
+            .product_fav:hover i {
+                color: #fff
+            }
+
+    .about {
+        margin-top: 12px
+    }
+
+    .off {
+        position: absolute;
+        left: 65%;
+        top: 6%;
+        width: 80px;
+        text-align: center;
+        height: 30px;
+        line-height: 8px;
+        border-radius: 5px;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff
+    }</style>
+
+
+

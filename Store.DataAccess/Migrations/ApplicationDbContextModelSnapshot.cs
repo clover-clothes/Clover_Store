@@ -195,6 +195,22 @@ namespace Clover_Store.Migrations
                             Green = 86,
                             Name = "Khaki",
                             Red = 91
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Blue = 163,
+                            Green = 160,
+                            Name = "Dusty pink",
+                            Red = 237
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Blue = 52,
+                            Green = 37,
+                            Name = "Navy blue",
+                            Red = 26
                         });
                 });
 
@@ -265,44 +281,6 @@ namespace Clover_Store.Migrations
                     b.HasIndex("attributId");
 
                     b.ToTable("Image");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Image_url = "/Images/product/Screenshot2024-06-06160542.png",
-                            attributId = 1
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Image_url = "/Images/product/Screenshot2024-06-06161345.png",
-                            attributId = 2
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Image_url = "/Images/product/Screenshot2024-06-06160542.png",
-                            attributId = 3
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Image_url = "/Images/product/Screenshot2024-06-06160542.png",
-                            attributId = 4
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Image_url = "/Images/product/Screenshot2024-06-06160542.png",
-                            attributId = 6
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Image_url = "/Images/product/Screenshot2024-06-06160542.png",
-                            attributId = 6
-                        });
                 });
 
             modelBuilder.Entity("Clover_Store.Models.Order", b =>
@@ -411,41 +389,6 @@ namespace Clover_Store.Migrations
                     b.HasIndex("CategoryID");
 
                     b.ToTable("Products");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Brand_name = "LCW",
-                            CategoryID = 1,
-                            Description = "Made from waffle fabric, this t-shirt offers a stylish and modern look with its polo collar design.\r\n With its soft and comfortable texture,\r\n it can be preferred both in daily life and on special occasions.",
-                            Material = "100% Cotton",
-                            Title = "Polo Yaka Kısa Kollu Pike Erkek Tişört",
-                            Total_quantity = 13,
-                            Type = "Male"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Brand_name = "adidas",
-                            CategoryID = 5,
-                            Description = "It is made of durable and easy-care polyester fabric.\r\n Its short sleeve design keeps you cool and comfortable even in hot weather conditions.",
-                            Material = "100% Cotton",
-                            Title = "Regular Fit Men's Short Sleeve Shirt",
-                            Total_quantity = 13,
-                            Type = "Male"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Brand_name = "ZARA",
-                            CategoryID = 7,
-                            Description = "Round neck, straight short sleeve oversize tunic, made of single jersey fabric. It provides coolness in summer with its light and breathable structure.",
-                            Material = "100% Cotton",
-                            Title = "Crew Neck Plain Short Sleeve Oversize Women's Tunic",
-                            Total_quantity = 13,
-                            Type = "Male"
-                        });
                 });
 
             modelBuilder.Entity("Clover_Store.Models.Reviwe", b =>
@@ -459,8 +402,9 @@ namespace Clover_Store.Migrations
                     b.Property<string>("Comment")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CusomerID")
-                        .HasColumnType("int");
+                    b.Property<string>("CusomerID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("DateTime")
                         .HasColumnType("Date");
@@ -673,73 +617,109 @@ namespace Clover_Store.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 1,
-                            ColorID = 2,
+                            Id = 1030,
+                            ColorID = 8,
                             Price = 699.99m,
-                            ProductID = 1,
+                            ProductID = 1012,
                             Quantity = 10,
                             SizeID = 2
                         },
                         new
                         {
-                            Id = 2,
+                            Id = 1031,
                             ColorID = 4,
                             Price = 699.99m,
-                            ProductID = 1,
+                            ProductID = 1013,
                             Quantity = 10,
                             SizeID = 3
                         },
                         new
                         {
-                            Id = 3,
-                            ColorID = 4,
+                            Id = 1032,
+                            ColorID = 7,
                             Price = 799.99m,
-                            ProductID = 1,
+                            ProductID = 1014,
                             Quantity = 10,
                             SizeID = 4
                         },
                         new
                         {
-                            Id = 4,
-                            ColorID = 2,
+                            Id = 1033,
+                            ColorID = 7,
                             Price = 675.00m,
-                            ProductID = 2,
+                            ProductID = 1015,
                             Quantity = 10,
                             SizeID = 3
                         },
                         new
                         {
-                            Id = 5,
+                            Id = 1034,
                             ColorID = 2,
                             Price = 975.00m,
-                            ProductID = 2,
+                            ProductID = 1016,
                             Quantity = 8,
                             SizeID = 6
                         },
                         new
                         {
-                            Id = 6,
+                            Id = 1035,
                             ColorID = 6,
                             Price = 975.00m,
-                            ProductID = 2,
+                            ProductID = 1017,
                             Quantity = 14,
                             SizeID = 3
                         },
                         new
                         {
-                            Id = 7,
-                            ColorID = 6,
+                            Id = 1036,
+                            ColorID = 8,
                             Price = 899.99m,
-                            ProductID = 2,
+                            ProductID = 1019,
                             Quantity = 10,
                             SizeID = 5
                         },
                         new
                         {
-                            Id = 8,
-                            ColorID = 2,
+                            Id = 1037,
+                            ColorID = 7,
                             Price = 899.99m,
-                            ProductID = 3,
+                            ProductID = 1020,
+                            Quantity = 10,
+                            SizeID = 3
+                        },
+                        new
+                        {
+                            Id = 1038,
+                            ColorID = 8,
+                            Price = 899.99m,
+                            ProductID = 1021,
+                            Quantity = 10,
+                            SizeID = 5
+                        },
+                        new
+                        {
+                            Id = 1039,
+                            ColorID = 6,
+                            Price = 899.99m,
+                            ProductID = 1022,
+                            Quantity = 10,
+                            SizeID = 3
+                        },
+                        new
+                        {
+                            Id = 1040,
+                            ColorID = 8,
+                            Price = 899.99m,
+                            ProductID = 1023,
+                            Quantity = 10,
+                            SizeID = 3
+                        },
+                        new
+                        {
+                            Id = 1041,
+                            ColorID = 7,
+                            Price = 899.99m,
+                            ProductID = 1024,
                             Quantity = 15,
                             SizeID = 2
                         });
@@ -753,8 +733,9 @@ namespace Clover_Store.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CustomerID")
-                        .HasColumnType("int");
+                    b.Property<string>("CustomerID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("ProductID")
                         .HasColumnType("int");
@@ -1058,7 +1039,7 @@ namespace Clover_Store.Migrations
 
             modelBuilder.Entity("Clover_Store.Models.Reviwe", b =>
                 {
-                    b.HasOne("Clover_Store.Models.Customer", "Customer")
+                    b.HasOne("Clover_Store.Models.CustomerUsers", "Customer")
                         .WithMany()
                         .HasForeignKey("CusomerID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -1123,7 +1104,7 @@ namespace Clover_Store.Migrations
 
             modelBuilder.Entity("Clover_Store.Models.wishList", b =>
                 {
-                    b.HasOne("Clover_Store.Models.Customer", "Customer")
+                    b.HasOne("Clover_Store.Models.CustomerUsers", "Customer")
                         .WithMany()
                         .HasForeignKey("CustomerID")
                         .OnDelete(DeleteBehavior.Cascade)

@@ -1,5 +1,6 @@
 
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Clover_Store.Models
 {
@@ -10,9 +11,9 @@ namespace Clover_Store.Models
         [Required]
         public string Name { get; set; } = string.Empty;
         public string? Details { get; set; } = string.Empty;
-        
 
-
+        [NotMapped]
+        public int proQuantity { get; set; }    
 
     }
 }

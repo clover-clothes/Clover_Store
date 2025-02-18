@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Product Card/Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- header start -->
+    <header class="header">
+      <div class="header__top-bar">
+        <div class="header__logo">
+          <a href="#" class="header__logo--link">
+            <img src="images/Logo1.png" width="40%" alt="" />
+          </a>
+        </div>
+        <form action="#" class="header__search">
+          <input
+            type="text"
+            class="header__search-input"
+            placeholder="Search different clothes"
+          />
+        </form>
+        <div class="header__login">
+          <a href="index.html" class="header__login-link">Login</a>
+        </div>
+      </div>
+      <nav class="header__category">
+        <a href="#" class="btn btn--link">Men</a>
+        <a href="#" class="btn btn--link">Women</a>
+        <a href="#" class="btn btn--link">Kid</a>
+        <a href="#" class="btn btn--link">Sport</a>
+        <a href="#" class="btn btn--link">Dress</a>
+        <a href="#" class="btn btn--link">Pants</a>
+        <a href="#" class="btn btn--link">Skirt</a>
+        <a href="#" class="btn btn--link">Undreware</a>
+        <a href="#" class="btn btn--link">Shirt</a>
+        <a href="#" class="btn btn--link">Sweat</a>
+        <a href="#" class="btn btn--link">Shoes</a>
+      </nav>
+    </header>
+    <div class="card-wrapper">
+      <div class="card">
+        <!-- card left -->
+        <div class="product-imgs">
+          <div class="img-display">
+            <div class="img-showcase">
+              <img src="images/blue.jpeg" alt="clothes image" />
+              <img src="images/brown.jpeg" alt="clothes image" />
+              <img src="images/gold.jpeg" alt="clothes image" />
+              <img src="images/red.jpeg" alt="clothes image" />
+            </div>
+          </div>
+          <div class="img-select">
+            <div class="img-item">
+              <a href="#" data-id="1">
+                <img src="images/blue.jpeg" alt="clothes image" />
+              </a>
+            </div>
+            <div class="img-item">
+              <a href="#" data-id="2">
+                <img src="images/brown.jpeg" alt="clothes image" />
+              </a>
+            </div>
+            <div class="img-item">
+              <a href="#" data-id="3">
+                <img src="images/gold.jpeg" alt="clothes image" />
+              </a>
+            </div>
+            <div class="img-item">
+              <a href="#" data-id="4">
+                <img src="images/red.jpeg" alt="clothes image" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- card right -->
+        <div class="product-content">
+          <h2 class="product-title">Clover Clothes</h2>
+          <a href="HomePage.html" class="product-link">Visit Clover Store</a>
+          <div class="product-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>4.7(21)</span>
+          </div>
+
+          <div class="product-price">
+            <p class="last-price">Old Price: <span>$499.00</span></p>
+            <p class="new-price">New Price: <span>$474.00 (5%)</span></p>
+          </div>
+
+          <div class="product-detail">
+            <h2>about this item:</h2>
+            <p>...</p>
+            <ul>
+              <li>Color: <span>Black</span></li>
+              <li>Available: <span>in stock</span></li>
+              <li>Category: <span>Clothes</span></li>
+              <li>Shipping Area: <span>All over the world</span></li>
+              <li>Shipping Fee: <span>Free</span></li>
+            </ul>
+            <select name="Size-detail">
+              <option>Select Size</option>
+              <option>XXL</option>
+              <option>XL</option>
+              <option>L</option>
+              <option>M</option>
+              <option>S</option>
+            </select>
+          </div>
+
+          <div class="purchase-info">
+            <input type="number" min="0" value="1" />
+            <button type="button" class="btn">
+              Add to Cart <i class="fas fa-shopping-cart"></i>
+            </button>
+            <button type="button" class="btn">Compare</button>
+          </div>
+
+          <div class="social-links">
+            <p>Share At:</p>
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-pinterest"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--See more-->
+    <div class="product-section">
+      <h2>There's always more</h2>
+      <div class="product-categories">
+        <div class="category-item">
+          <a href="index.html">
+            <img src="images/blue.jpeg" alt="T-shirt" />
+            <p>Clover T-shirt</p>
+          </a>
+        </div>
+        <div class="category-item">
+          <a href="index.html">
+            <img src="images/brown.jpeg" alt="shirt" />
+            <p>Clover shirt</p>
+          </a>
+        </div>
+        <div class="category-item">
+          <a href="index.html">
+            <img src="images/gold.jpeg" alt="dress" />
+            <p>Clover dress</p>
+          </a>
+        </div>
+        <div class="category-item">
+          <a href="index.html">
+            <img src="images/red.jpeg" alt="jeans" />
+            <p>Clover jeans</p>
+          </a>
+        </div>
+        <div class="category-item">
+          <a href="index.html">
+            <img src="images/gold.jpeg" alt="sportswear" />
+            <p>Clover sportswear</p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">CLOVER STOR</h5>
+            <p class="grey-text text-lighten-4">
+              At Clover Store we offer a wide range of modern and comfortable
+              clothes that suit all tastes and occasions. We seek to provide an
+              enjoyable and distinctive shopping experience for our customers.
+            </p>
+          </div>
+          <div class="col l4 offset-l1 s12">
+            <h5 class="white-text">Help</h5>
+            <ul>
+              <li>
+                <a class="grey-text text-lighten-3" href="tel:+905524345081   "
+                  >Telephone</a
+                >
+              </li>
+              <li>
+                <a class="grey-text text-lighten-3" href="#!">Shipping</a>
+              </li>
+              <li>
+                <a class="grey-text text-lighten-3" href="#!">Cancellation</a>
+              </li>
+              <li><a class="grey-text text-lighten-3" href="#!">Returns</a></li>
+            </ul>
+          </div>
+
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Policy</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Return</a></li>
+              <li>
+                <a class="grey-text text-lighten-3" href="#!">Security</a>
+              </li>
+              <li><a class="grey-text text-lighten-3" href="#!">Privacy</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Sitemap</a></li>
+            </ul>
+          </div>
+
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Social</h5>
+            <ul>
+              <li>
+                <a class="grey-text text-lighten-3" href="#!">Facebook</a>
+              </li>
+              <li>
+                <a class="grey-text text-lighten-3" href="#!">Linkedin</a>
+              </li>
+              <li><a class="grey-text text-lighten-3" href="#!">Google</a></li>
+              <li>
+                <a class="grey-text text-lighten-3" href="#!">Instagram</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          &copy; 2024 Clover Store www.Clover-AAB.com
+          <a class="grey-text text-lighten-4 right" href="index22.html"
+            >Store of dress snippet</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

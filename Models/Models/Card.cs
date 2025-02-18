@@ -1,5 +1,6 @@
 
-﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Clover_Store.Models
@@ -22,7 +23,9 @@ namespace Clover_Store.Models
 
         [Column(TypeName = "Date")]
         public DateTime EXdate { get; set; }
-        
+
+
+
 
 
     }

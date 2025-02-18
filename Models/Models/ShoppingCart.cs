@@ -23,7 +23,7 @@ namespace Clover_Store.Models
         public CustomerUsers CustomerUsers { get; set; }
 
         [NotMapped]
-        public double Price { get; set; }
+        public decimal Price { get; set; }
     }
 }
 
